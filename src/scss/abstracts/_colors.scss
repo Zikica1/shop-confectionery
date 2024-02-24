@@ -1,0 +1,30 @@
+:root {
+  --clr-dark: 0 0 0;
+  --clr-light: 255 255 255;
+  --clr-accent: 224 149 44;
+}
+
+//utility
+.text-light {
+  color: rgb(var(--clr-light));
+}
+
+.text-dark {
+  color: rgb(var(--clr-dark));
+}
+
+.text-accent {
+  color: rgb(var(--clr-accent));
+}
+
+.bg-light {
+  background-color: rgb(var(--clr-light));
+}
+
+.bg-dark {
+  background-color: rgb(var(--clr-dark));
+}
+
+.bg-accent {
+  background-color: rgb(var(--clr-accent));
+}

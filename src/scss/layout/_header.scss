@@ -1,0 +1,44 @@
+@use '../abstracts' as *;
+
+.header-data-export {
+  padding: 15px 35px;
+}
+
+.flex--home {
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: flex-end;
+
+  @media (min-width: 768px) {
+    text-align: left;
+  }
+}
+
+.flex--home > :first-child {
+  flex-grow: 1;
+  flex-basis: 290px;
+  margin-block-start: 1em;
+}
+
+.flex--home > :last-child {
+  flex-grow: 999;
+  flex-basis: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1em, 5vw, 4em);
+
+  @media (min-width: 768px) {
+    justify-content: flex-end;
+  }
+}
+
+.contact {
+  align-items: center;
+}
+
+.contact p {
+  color: rgba(var(--clr-light) / 0.6);
+  font-weight: 700;
+}
