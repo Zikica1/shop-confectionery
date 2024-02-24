@@ -140,48 +140,73 @@ img, svg {
 }
 
 .header-data-export {
-  padding: 15px 35px;
+  padding: .9375em 2.1875em;
 }
 
 .flex--home {
-  text-align: center;
   flex-wrap: wrap;
   align-items: flex-end;
 }
 
-@media (width >= 768px) {
-  .flex--home {
-    text-align: left;
-  }
-}
-
 .flex--home > :first-child {
   flex-grow: 1;
-  flex-basis: 290px;
+  flex-basis: 18.125em;
   margin-block-start: 1em;
 }
 
 .flex--home > :last-child {
   flex-wrap: wrap;
   flex-grow: 999;
-  flex-basis: 400px;
+  flex-basis: 25em;
   justify-content: center;
   align-items: center;
   gap: clamp(1em, 5vw, 4em);
   display: flex;
 }
 
-@media (width >= 768px) {
+@media (width >= 48rem) {
   .flex--home > :last-child {
     justify-content: flex-end;
   }
 }
 
-.contact {
+.header-data-export .login {
+  --gap: 1.5em;
+  justify-content: center;
+}
+
+@media (width >= 48rem) {
+  .header-data-export .login {
+    justify-content: flex-start;
+  }
+}
+
+.header-data-export .login > :first-child:after {
+  content: "";
+  z-index: 100;
+  background-color: rgba(var(--clr-light) / .2);
+  width: 2px;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+  left: 12px;
+}
+
+.header-data-export .login > * {
+  color: rgba(var(--clr-light) / .6);
+  font-weight: 500;
+}
+
+.header-data-export .login > :hover {
+  color: var(--clr-light);
+  cursor: pointer;
+}
+
+.header-data-export .contact > * {
   align-items: center;
 }
 
-.contact p {
+.header-data-export .contact p {
   color: rgba(var(--clr-light) / .6);
   font-weight: 700;
 }
