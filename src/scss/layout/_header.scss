@@ -33,7 +33,7 @@
   justify-content: center;
   gap: clamp(1em, 5vw, 4em);
 
-  @media (min-width: 48rem) {
+  @include smallSize2 {
     justify-content: flex-end;
   }
 }
@@ -41,8 +41,9 @@
 .header-data-export .login {
   --gap: 1.5em;
   justify-content: center;
+  align-items: flex-end;
 
-  @media (min-width: 48rem) {
+  @include smallSize2 {
     justify-content: flex-start;
   }
 }
@@ -82,12 +83,23 @@
 .navigation-primary {
   position: fixed;
   z-index: 99;
-  inset: 7em 0 0 0;
+  inset: 0;
+  padding-block-start: 7em;
   height: 100svh;
   background: rgba(var(--clr-light));
   opacity: 0;
   visibility: hidden;
   transition: all 0.75s ease;
+
+  @include middleSize {
+    position: unset;
+    inset: unset;
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+    flex: 1;
+    padding-block-start: 0;
+  }
 }
 
 .show {
@@ -106,6 +118,16 @@
   opacity: 0;
   visibility: hidden;
   transition: all 0.5s ease;
+
+  @include middleSize {
+    width: unset;
+    height: unset;
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    flex-direction: row;
+    align-items: flex-start;
+  }
 }
 
 .navigation-primary.show .nav-body {
@@ -124,6 +146,10 @@
   border-radius: 50%;
   transform: translateX(-50%);
   cursor: pointer;
+
+  @include middleSize {
+    display: none;
+  }
 }
 
 .close-button {
@@ -154,6 +180,13 @@
 
 .navigation-primary ul {
   --flow-gap: 1.24em;
+
+  @include middleSize {
+    --flow-gap: 0;
+
+    display: flex;
+    gap: 2em;
+  }
 }
 .navigation-primary li {
   text-align: center;
@@ -162,6 +195,11 @@
 .navigation-primary li a {
   font-size: 1.875rem;
   font-weight: 500;
+
+  @include middleSize {
+    font-size: 1rem;
+    color: rgba(var(--clr-dark) / 0.8);
+  }
 }
 
 .navigation-primary li a:hover {
@@ -169,6 +207,7 @@
 }
 
 .navigation-primary li.action a {
+  color: var(--clr-dark);
   font-weight: 800;
 }
 
@@ -177,7 +216,12 @@
 }
 
 .logo {
+  --gap: 1.25em;
   flex: 1;
+
+  @include middleSize {
+    flex: unset;
+  }
 }
 
 .logo::after {
@@ -189,28 +233,67 @@
   background-color: rgb(51 51 51 / 0.4);
   align-self: flex-end;
   margin-block-end: 0.9375em;
+
+  @include middleSize {
+    left: 0;
+    margin-inline: 1.5em;
+  }
 }
 
 .shopping-basket {
+  position: relative;
   padding: 0.937em;
   aspect-ratio: 1;
   background-color: rgb(var(--clr-accent));
   border-radius: 50%;
   cursor: pointer;
 
-  @media (min-width: 768px) {
+  @include smallSize2 {
     border-radius: 30px;
     display: flex;
     align-items: center;
     aspect-ratio: unset;
-    padding: 15px 50px;
+    padding: 0.9375em 3.125em;
+  }
+}
+
+.shopping-basket::after {
+  content: 'basket is empty';
+  position: absolute;
+  top: 3em;
+  right: 0;
+  width: 18.5em;
+  height: 15em;
+  box-shadow: 0 0 3px rgb(221 221 221);
+  background-color: rgba(var(--clr-light));
+  background-image: url(../images/header/shopping-cart-2.jpg);
+  background-repeat: no-repeat;
+  background-position: center 40%;
+  border-radius: 16px;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: rgb(170, 170, 170);
+  text-transform: uppercase;
+  padding: 1em 0.5em;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease-out;
+}
+
+@include smallSize2 {
+  .shopping-basket:hover.shopping-basket::after {
+    visibility: visible;
+    opacity: 1;
   }
 }
 
 .shopping-basket > span {
   display: none;
 
-  @media (min-width: 768px) {
+  @include smallSize2 {
     display: block;
     margin-inline-end: 0.5em;
   }
@@ -226,7 +309,7 @@
   height: 20px;
   cursor: pointer;
 
-  @media (min-width: 768px) {
+  @include middleSize {
     display: none;
   }
 }
@@ -273,7 +356,7 @@
   background-color: rgb(var(--clr-light));
   box-shadow: 4px 0 0 rgba(var(--clr-dark) / 0.1);
   padding: 1.25em;
-  transform: translateX(-100%);
+  transform: translateX(-101%);
   transition: transform 0.7s ease;
 }
 
