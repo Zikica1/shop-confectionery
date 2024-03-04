@@ -1,9 +1,9 @@
 :root {
-  --fs-900: clamp(1.75rem, 6vw + 1rem, 3.75rem);
+  --fs-900: clamp(1.75rem, 3.5vw + 1rem, 3.75rem);
   --fs-800: 1.6875rem;
   --fs-700: 1.875rem;
   --fs-600: 1.625rem;
-  --fs-500: clamp(1.5rem, 6vw + 1rem, 2.8125rem);
+  --fs-500: clamp(1.5rem, 2.5vw + 1rem, 2.8125rem);
   --fs-400: 1.375rem;
   --fs-300: 1.25rem;
   --fs-200: 1.125rem;
@@ -74,6 +74,26 @@
   font-size: var(--fs-900);
 }
 
+.ff-sans-serif {
+  font-family: var(--ff-sans-serif);
+}
+
+.ff-sans-con {
+  font-family: var(--ff-sans-cond);
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
 :root {
   --clr-dark: 0 0 0;
   --clr-light: 255 255 255;
@@ -110,7 +130,11 @@
 }
 
 .flow > :where(:not(:first-child)) {
-  margin-block: var(--flow-gap, 1rem);
+  margin-block-start: var(--flow-gap, 1rem);
+}
+
+.overflow {
+  overflow: hidden;
 }
 
 *, :before, :after {
@@ -328,6 +352,10 @@ img, svg {
   position: absolute;
   left: 50%;
   transform: rotate(-45deg);
+}
+
+.anim1 {
+  overflow-x: clip;
 }
 
 .navigation-primary ul {
@@ -556,9 +584,98 @@ img, svg {
   display: grid;
 }
 
+.grid-container {
+  text-align: center;
+  align-items: center;
+  padding-inline: 1.875em;
+  display: grid;
+}
+
 .flex {
   gap: var(--gap, 1em);
   display: flex;
+}
+
+.btn {
+  color: rgb(var(--clr-light));
+  background-color: rgb(var(--clr-accent));
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 23px;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.btn--accent:hover, .btn--dark {
+  background-color: rgb(var(--clr-dark));
+}
+
+.btn--dark:hover {
+  background-color: rgb(var(--clr-accent));
+}
+
+.main-home {
+  padding-inline: 2.1875em;
+}
+
+.hero {
+  isolation: isolate;
+  background-color: #f2f1ec;
+  border-radius: 32px;
+  gap: 2em;
+  margin-block-end: 100px;
+  position: relative;
+}
+
+.landing-img-1 {
+  position: relative;
+  left: 10%;
+}
+
+.landing-img-1 img {
+  max-width: 80%;
+}
+
+.landing-img-2 {
+  z-index: -1;
+  position: absolute;
+  top: -80px;
+  right: -450px;
+}
+
+.landing-img-2 img {
+  max-width: 40%;
+}
+
+.hero-content {
+  --flow-gap: 1.75em;
+}
+
+.hero-content h1 {
+  font-weight: 400;
+}
+
+.hero-content h1 span {
+  margin-block: 14px 5px;
+  font-weight: 700;
+  line-height: 1.2;
+  display: block;
+}
+
+.hero-content-desc {
+  --gap: 0;
+}
+
+.hero-content-desc > :last-child {
+  text-align: left;
+  align-self: center;
+}
+
+.buttons {
+  justify-content: center;
+  padding-block-end: 1em;
 }
 
 /*# sourceMappingURL=index.b10d73a7.css.map */

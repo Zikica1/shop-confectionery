@@ -1,0 +1,65 @@
+@use '../abstracts' as *;
+@use '../components/buttons' as *;
+
+.main-home {
+  padding-inline: 2.1875em;
+}
+
+.hero {
+  gap: 2em;
+
+  position: relative;
+  isolation: isolate;
+  background-color: rgb(242 241 236);
+  border-radius: 32px;
+  margin-block-end: 100px;
+}
+
+.landing-img-1 {
+  position: relative;
+  left: 10%;
+}
+
+.landing-img-1 img {
+  max-width: 80%;
+}
+
+.landing-img-2 {
+  position: absolute;
+  z-index: -1;
+  top: -80px;
+  right: -450px;
+}
+
+.landing-img-2 img {
+  max-width: 40%;
+}
+
+.hero-content {
+  --flow-gap: 1.75em;
+}
+
+.hero-content h1 {
+  font-weight: 400;
+}
+
+.hero-content h1 span {
+  display: block;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-block: 14px 5px;
+}
+
+.hero-content-desc {
+  --gap: 0;
+}
+
+.hero-content-desc > *:last-child {
+  align-self: center;
+  text-align: left;
+}
+
+.buttons {
+  justify-content: center;
+  padding-block-end: 1em;
+}

@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="scss/main.scss" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      defer
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      defer
+    ></script>
     <script type="module" src="js/index.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -71,13 +80,15 @@
               <div class="close-button"></div>
             </div>
 
-            <ul class="flow">
-              <li class="action"><a href="index.html">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Shop</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
+            <div class="anim1">
+              <ul class="flow">
+                <li class="action"><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
           </div>
         </nav>
 
@@ -109,5 +120,46 @@
         </button>
       </div>
     </header>
+    <!--Main-->
+    <main class="main-home">
+      <!--Hero section-->
+      <section class="hero overflow grid-container">
+        <div class="landing-img-1">
+          <img src="images/hero/hero-img-4.png" alt="landing-img" />
+        </div>
+        <div class="landing-img-2">
+          <img src="images/hero/hero-img-5.png" alt="" />
+        </div>
+        <div class="hero-content flow">
+          <h1 class="ff-sans-con fs-500 text-accent">
+            Confectionery
+            <span class="ff-sans-serif fs-900 text-dark"
+              >Make Your Baking Better Tasting</span
+            >
+          </h1>
+
+          <div class="hero-content-desc flex">
+            <img src="images/hero/hero-img-2.png" alt="" />
+
+            <div class="text">
+              <h4 class="fs-400 fw-500">Chocolate Cake</h4>
+              <p>Enjoy blissful moments with our chocolate treats.</p>
+            </div>
+          </div>
+
+          <div class="buttons flex">
+            <div class="btn btn--accent">Shop Now</div>
+            <div class="btn btn--dark">Custom Orders</div>
+          </div>
+        </div>
+        <div class="landing-img-4">
+          <img src="images/hero/hero-img-1.png" alt="" />
+        </div>
+        <div class="landing-img-5">
+          <img src="images/hero/hero-img-7.png" alt="images" />
+          <img src="images/hero/hero-img-6.png" alt="" />
+        </div>
+      </section>
+    </main>
   </body>
 </html>

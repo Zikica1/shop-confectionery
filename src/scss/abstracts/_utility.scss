@@ -1,3 +1,7 @@
 .flow > *:where(:not(:first-child)) {
-  margin-block: var(--flow-gap, 1rem);
+  margin-block-start: var(--flow-gap, 1rem);
+}
+
+.overflow {
+  overflow: hidden;
 }

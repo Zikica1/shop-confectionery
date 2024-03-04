@@ -1,0 +1,25 @@
+@use '../abstracts/colors' as *;
+
+.btn {
+  color: rgb(var(--clr-light));
+  background-color: rgb(var(--clr-accent));
+  display: inline-block;
+  border: none;
+  padding: 12px 23px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn--accent:hover {
+  background-color: rgb(var(--clr-dark));
+}
+
+.btn--dark {
+  background-color: rgb(var(--clr-dark));
+}
+
+.btn--dark:hover {
+  background-color: rgb(var(--clr-accent));
+}
