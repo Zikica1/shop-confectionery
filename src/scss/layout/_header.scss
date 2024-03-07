@@ -1,5 +1,10 @@
 @use '../abstracts' as *;
 
+.header-primary {
+  position: relative;
+  z-index: 999;
+}
+
 .header-data-export {
   position: relative;
   z-index: 100;
@@ -265,6 +270,7 @@
 .shopping-basket::after {
   content: 'basket is empty';
   position: absolute;
+  z-index: 999999;
   top: 3em;
   right: 0;
   width: 18.5em;
