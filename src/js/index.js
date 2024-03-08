@@ -171,3 +171,43 @@ ImagesLanding.forEach((img) => {
     duration: 1.5,
   });
 });
+
+const mm3 = gsap.matchMedia();
+
+mm3.add('(min-width: 1024px)', () => {
+  gsap.to('.image-landing-4-anim', {
+    scale: 1.1,
+    duration: 1,
+    scrollTrigger: {
+      trigger: '.landing-img-4',
+      start: 'top 60%',
+      end: 'bottom 30%',
+      markers: false,
+      scrub: 1,
+    },
+  });
+
+  gsap.to('.image-landing-5-anim', {
+    y: -70,
+    duration: 0.1,
+    scrollTrigger: {
+      trigger: '.imageLanding5',
+      start: 'top 70%',
+      end: '+=50 50%',
+      markers: false,
+      scrub: 1,
+    },
+  });
+
+  gsap.from('.image-landing-6-anim', {
+    rotate: '-25deg',
+    duration: 0.2,
+    scrollTrigger: {
+      trigger: '.imageLanding5',
+      start: 'top 70%',
+      end: '+=100 50%',
+      markers: false,
+      scrub: 1,
+    },
+  });
+});
