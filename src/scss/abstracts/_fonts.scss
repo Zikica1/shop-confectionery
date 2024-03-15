@@ -3,6 +3,8 @@
 :root {
   --fs-900: clamp(1.75rem, 3.5vw + 1rem, 3.75rem); //28,32,50,60
   --fs-800: 1.6875rem; //27px
+  --fs-720: 1.6875rem; //27px
+  --fs-710: 2rem; //32px
   --fs-700: 1.875rem; //30px
   --fs-600: 1.625rem; //26px
   --fs-500: clamp(1.5rem, 2.5vw + 1rem, 2.8125rem); //24px,28px,36px,45px
@@ -15,6 +17,8 @@
 @include smallSize {
   :root {
     --fs-800: 2rem; //32px
+    --fs-720: 1.875rem; // 30px
+    --fs-710: 2.1875rem; //35px
     --fs-700: 2.875rem; //46px
     --fs-600: 1.875rem; //30px
     --fs-400: 1.875rem; //30px
@@ -70,6 +74,14 @@
   font-size: var(--fs-700);
 }
 
+.fs-710 {
+  font-size: var(--fs-710);
+}
+
+.fs-720 {
+  font-size: var(--fs-720);
+}
+
 .fs-800 {
   font-size: var(--fs-800);
 }
@@ -96,4 +108,8 @@
 
 .fw-600 {
   font-weight: 600;
+}
+
+.fw-700 {
+  font-weight: 700;
 }

@@ -24,3 +24,21 @@
     text-align: left;
   }
 }
+
+.grid-container-sec {
+  display: grid;
+  gap: var(--gap, 1rem);
+
+  @include smallSize2 {
+    grid-template-columns: repeat(3, minmax(0, 25rem));
+  }
+}
+
+// .grid-container-sec {
+//   display: grid;
+//   gap: var(--gap, 1em);
+
+//   @include smallSize2 {
+//     grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr));
+//   }
+// }

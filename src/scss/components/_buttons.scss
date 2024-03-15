@@ -1,15 +1,18 @@
 @use '../abstracts/colors' as *;
+@use '../abstracts/fonts' as *;
 
 .btn {
   color: rgb(var(--clr-light));
   background-color: rgb(var(--clr-accent));
   display: inline-block;
   border: none;
-  padding: 12px 23px;
+  padding: 14px 23px;
   border-radius: 30px;
   font-size: 14px;
   font-weight: 500;
+  font-family: var(--ff-sans-serif);
   cursor: pointer;
+  transition: background 0.2s ease;
 }
 
 .btn--accent:hover {

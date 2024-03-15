@@ -645,7 +645,7 @@ tl3.from(".hero-content-desc", {
     x: -100,
     duration: 1.5
 }, "-=0.5");
-const buttons = gsap.utils.toArray(".btn");
+const buttons = gsap.utils.toArray(".btn-anim");
 buttons.forEach((item)=>{
     gsap.from(item, {
         scrollTrigger: {
@@ -737,6 +737,46 @@ mm3.add("(min-width: 1024px)", ()=>{
             trigger: ".imageLanding5",
             start: "top 70%",
             end: "+=100 50%",
+            markers: false,
+            scrub: 1
+        }
+    });
+});
+//shop-card--ani
+gsap.from(".shop-title", {
+    scale: "1.5",
+    opacity: 0,
+    duration: 1,
+    scrollTrigger: {
+        trigger: ".shop-category",
+        start: "top 70%",
+        end: "+=100 60%",
+        markers: false,
+        scrub: false
+    }
+});
+const shopCards = document.querySelectorAll(".shop-card");
+const shopObserver = new IntersectionObserver((entries)=>{
+    entries.forEach((entry)=>{
+        entry.target.classList.toggle("show", entry.isIntersecting);
+        if (entry.isIntersecting) shopObserver.unobserve(entry.target);
+    });
+}, {
+    threshold: 0.25,
+    rootMargin: "0px 0px -100px 0px"
+});
+shopCards.forEach((card)=>{
+    shopObserver.observe(card);
+});
+const mm2 = gsap.matchMedia();
+mm2.add("(min-width: 1024px)", ()=>{
+    gsap.from(".card-img-anim", {
+        scale: 1.3,
+        // duration: 0.5,
+        scrollTrigger: {
+            trigger: ".shop-card-2",
+            start: "top 65%",
+            end: "bottom 10%",
             markers: false,
             scrub: 1
         }
