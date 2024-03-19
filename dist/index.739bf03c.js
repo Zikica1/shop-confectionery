@@ -782,6 +782,18 @@ mm2.add("(min-width: 1024px)", ()=>{
         }
     });
 });
+gsap.from(".title-sales", {
+    scrollTrigger: {
+        trigger: ".title-sales",
+        start: "top 70%",
+        end: "bottom 50%",
+        markers: false,
+        scrub: false
+    },
+    scale: 1.1,
+    opacity: 0,
+    duration: 1
+});
 
 },{"2182b4642506a29c":"kTqFQ"}],"kTqFQ":[function(require,module,exports) {
 module.exports = require("333a34b064479e0f")(require("f05d53e69cfee187").getBundleURL("g05j8") + "main.18dbc454.js" + "?" + Date.now()).catch((err)=>{

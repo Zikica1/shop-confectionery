@@ -260,3 +260,16 @@ mm2.add('(min-width: 1024px)', () => {
     },
   });
 });
+
+gsap.from('.title-sales', {
+  scrollTrigger: {
+    trigger: '.title-sales',
+    start: 'top 70%',
+    end: 'bottom 50%',
+    markers: false,
+    scrub: false,
+  },
+  scale: 1.1,
+  opacity: 0,
+  duration: 1,
+});

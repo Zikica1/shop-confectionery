@@ -281,6 +281,10 @@
   position: absolute;
   top: -1.25em;
   right: 0;
+
+  @include smallSize2 {
+    top: 2em;
+  }
 }
 
 .shop-card-3 {
@@ -420,6 +424,10 @@
   text-align: center;
 }
 
+.title-sales {
+  margin-block-end: 1.23em;
+}
+
 .card-sales {
   grid-row: span 4;
   display: grid;
@@ -506,5 +514,60 @@
 
 .fa-star {
   color: rgb(var(--clr-accent));
-  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+/* cup cake */
+.cup-cake {
+  --gap: 3.125rem;
+
+  @include smallSize2 {
+    grid-template-columns:
+      minmax(14.81rem, 1fr)
+      minmax(0, 52rem);
+  }
+}
+
+.cup-cake-card {
+  --flow-gap: 1.25rem;
+
+  border-radius: 50px;
+  transition: 0.25s ease;
+}
+
+.cup-cake-card:hover {
+  box-shadow: 0 25px 45px rgba(var(--clr-dark) / 0.3);
+}
+
+.cup-cake-card-1 {
+  background: url('../images/cup-cake/cup-cake-img-1.jpg') no-repeat center
+    center/cover;
+  padding: 5.1875em 1.25em 8.125em 1.875em;
+
+  @include smallSize2 {
+    padding: 53px 20px 100px 50px;
+  }
+
+  @include middleSize {
+    padding: 130px 70px 70px 120px;
+  }
+}
+
+.cup-cake-card-1 h3 {
+  line-height: 1.2;
+  max-width: 20ch;
+}
+
+.cup-cake-card-2 {
+  background: url('../images/cup-cake/cup-cake-img-2.jpg') no-repeat center
+    center/cover;
+  padding: 8.75em 1.875em 6.25em;
+
+  @include middleSize {
+    padding: 300px 80px 260px 170px;
+  }
+}
+
+.cup-cake-card-2 .cup-cake-content {
+  max-width: 45ch;
 }
