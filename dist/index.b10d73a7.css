@@ -662,6 +662,12 @@ img, svg {
   display: grid;
 }
 
+.grid-container-fill--tes {
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+  grid-auto-rows: auto auto auto;
+  gap: 5.5em 3em;
+}
+
 .flex {
   gap: var(--gap, 1em);
   display: flex;
@@ -1238,9 +1244,9 @@ img, svg {
   --gap: 3.125rem;
 }
 
-@media (width >= 48rem) {
+@media (width >= 56.25rem) {
   .cup-cake {
-    grid-template-columns: minmax(14.81rem, 1fr) minmax(0, 52rem);
+    grid-template-columns: minmax(14.81rem, 1fr) minmax(0, 51em);
   }
 }
 
@@ -1261,13 +1267,13 @@ img, svg {
 
 @media (width >= 48rem) {
   .cup-cake-card-1 {
-    padding: 53px 20px 100px 50px;
+    padding: 3.3125em 1.25em 6.25em 3.125em;
   }
 }
 
-@media (width >= 56.25rem) {
+@media (width >= 64rem) {
   .cup-cake-card-1 {
-    padding: 130px 70px 70px 120px;
+    padding: 8.125em 4.375em 4.375em 6.25em;
   }
 }
 
@@ -1276,19 +1282,124 @@ img, svg {
   line-height: 1.2;
 }
 
+@media (width >= 64rem) {
+  .cup-cake-card-1 h3 {
+    line-height: 1.6;
+  }
+}
+
 .cup-cake-card-2 {
   background: url("cup-cake-img-2.c40a95d7.jpg") center / cover no-repeat;
   padding: 8.75em 1.875em 6.25em;
 }
 
-@media (width >= 56.25rem) {
+@media (width >= 64rem) {
   .cup-cake-card-2 {
-    padding: 300px 80px 260px 170px;
+    padding: 18.75em 5em 16.25em 10.625em;
   }
 }
 
 .cup-cake-card-2 .cup-cake-content {
   max-width: 45ch;
+}
+
+.testimonial {
+  text-align: center;
+}
+
+.testimonial h2.title {
+  margin-block-end: 7em;
+}
+
+.testimonial-card {
+  grid-row: span 3;
+  grid-template-rows: subgrid;
+  border-radius: 30px;
+  row-gap: 1em;
+  padding: 6.25em 1.875em 3.75em;
+  transition: all .5s;
+  display: grid;
+  position: relative;
+}
+
+.testimonial-card:hover {
+  background-color: rgb(var(--clr-dark));
+}
+
+.testimonial-card .picture {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.testimonial-card .picture img {
+  margin-inline: auto;
+  position: relative;
+}
+
+.testimonial-card:hover h3, .testimonial-card:hover p {
+  z-index: 1;
+  color: rgb(var(--clr-light));
+}
+
+.blog-container {
+  --gap: 4em;
+}
+
+.blog h2 {
+  text-align: center;
+}
+
+.blog-card {
+  border-radius: 40px;
+  position: relative;
+}
+
+.blog-card img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform .5s;
+}
+
+.blog-card:hover img {
+  transform: scale(1.05);
+}
+
+.blog-card-content {
+  width: 100%;
+  transition: all .5s;
+  position: absolute;
+  bottom: 10%;
+}
+
+.blog-card:hover .blog-card-content {
+  bottom: 5%;
+}
+
+.blog-card-content-inner {
+  background-color: rgb(var(--clr-light));
+  border-radius: 30px;
+  width: 80%;
+  margin-inline: auto;
+  padding: 25px 30px 20px;
+  position: relative;
+}
+
+.blog-card:hover .blog-card-content-inner {
+  color: rgb(var(--clr-light));
+  background-color: rgb(var(--clr-accent));
+}
+
+.blog-card-content-inner time {
+  font-size: var(--fs-100);
+}
+
+.blog-card-content-inner h4 {
+  font-size: clamp(1rem, 1.5vw + .5rem, 1.25rem);
+  line-height: 1.9;
 }
 
 /*# sourceMappingURL=index.b10d73a7.css.map */

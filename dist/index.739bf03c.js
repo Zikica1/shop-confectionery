@@ -743,17 +743,21 @@ mm3.add("(min-width: 1024px)", ()=>{
     });
 });
 //shop-card--ani
-gsap.from(".shop-title", {
-    scale: "1.5",
-    opacity: 0,
-    duration: 1,
-    scrollTrigger: {
-        trigger: ".shop-category",
-        start: "top 70%",
-        end: "+=100 60%",
-        markers: false,
-        scrub: false
-    }
+//title animation for shop,best and testimonial section
+const titles = gsap.utils.toArray(".title-anim");
+titles.forEach((title)=>{
+    gsap.from(title, {
+        scale: 1.2,
+        opacity: 0,
+        duration: 1,
+        scrollTrigger: {
+            trigger: title,
+            start: "top 70%",
+            end: "bottom 50%",
+            markers: false,
+            scrub: false
+        }
+    });
 });
 const shopCards = document.querySelectorAll(".shop-card");
 const shopObserver = new IntersectionObserver((entries)=>{
@@ -782,17 +786,45 @@ mm2.add("(min-width: 1024px)", ()=>{
         }
     });
 });
-gsap.from(".title-sales", {
+//cup-cak-anim
+gsap.from(".cup-anim-1", {
+    y: -100,
+    opacity: 0,
+    duration: 1,
     scrollTrigger: {
-        trigger: ".title-sales",
-        start: "top 70%",
-        end: "bottom 50%",
+        trigger: ".cup-cake-card-1",
+        start: "top 65%",
+        end: "+=100 50%",
         markers: false,
         scrub: false
-    },
-    scale: 1.1,
+    }
+});
+gsap.from(".cup-anim-2", {
+    y: 100,
     opacity: 0,
-    duration: 1
+    duration: 1,
+    scrollTrigger: {
+        trigger: ".cup-cake-card-2",
+        start: "top 65%",
+        end: "+=150 50%",
+        markers: false,
+        scrub: false
+    }
+});
+//testimonial-anim
+const cardsTes = gsap.utils.toArray(".testimonial-card-anim");
+cardsTes.forEach((card)=>{
+    gsap.from(card, {
+        opacity: 0,
+        duration: 0.5,
+        scrollTrigger: {
+            trigger: card,
+            start: "top, 65%",
+            end: "+=100px 50%",
+            markers: false,
+            scrub: false
+        }
+    });
 });
 
 },{"2182b4642506a29c":"kTqFQ"}],"kTqFQ":[function(require,module,exports) {

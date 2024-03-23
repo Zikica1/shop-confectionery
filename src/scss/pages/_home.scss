@@ -521,10 +521,10 @@
 .cup-cake {
   --gap: 3.125rem;
 
-  @include smallSize2 {
+  @include middleSize {
     grid-template-columns:
       minmax(14.81rem, 1fr)
-      minmax(0, 52rem);
+      minmax(0, 51em);
   }
 }
 
@@ -545,17 +545,21 @@
   padding: 5.1875em 1.25em 8.125em 1.875em;
 
   @include smallSize2 {
-    padding: 53px 20px 100px 50px;
+    padding: 3.3125em 1.25em 6.25em 3.125em;
   }
 
-  @include middleSize {
-    padding: 130px 70px 70px 120px;
+  @include largeSize {
+    padding: 8.125em 4.375em 4.375em 6.25em;
   }
 }
 
 .cup-cake-card-1 h3 {
   line-height: 1.2;
   max-width: 20ch;
+
+  @include largeSize {
+    line-height: 1.6;
+  }
 }
 
 .cup-cake-card-2 {
@@ -563,11 +567,117 @@
     center/cover;
   padding: 8.75em 1.875em 6.25em;
 
-  @include middleSize {
-    padding: 300px 80px 260px 170px;
+  @include largeSize {
+    padding: 18.75em 5em 16.25em 10.625em;
   }
 }
 
 .cup-cake-card-2 .cup-cake-content {
   max-width: 45ch;
+}
+
+/* testimonial */
+.testimonial {
+  text-align: center;
+}
+
+.testimonial h2.title {
+  margin-block-end: 7em;
+}
+
+.testimonial-card {
+  position: relative;
+  grid-row: span 3;
+  display: grid;
+  grid-template-rows: subgrid;
+  row-gap: 1em;
+  border-radius: 30px;
+  padding: 6.25em 1.875em 3.75em;
+  transition: 0.5s ease;
+}
+
+.testimonial-card:hover {
+  background-color: rgb(var(--clr-dark));
+}
+
+.testimonial-card .picture {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  transform: translateY(-50%);
+}
+
+.testimonial-card .picture img {
+  position: relative;
+  margin-inline: auto;
+}
+
+.testimonial-card:hover h3 {
+  z-index: 1;
+  color: rgb(var(--clr-light));
+}
+
+.testimonial-card:hover p {
+  z-index: 1;
+  color: rgb(var(--clr-light));
+}
+
+/* Blog */
+.blog-container {
+  --gap: 4em;
+}
+
+.blog h2 {
+  text-align: center;
+}
+
+.blog-card {
+  position: relative;
+  border-radius: 40px;
+}
+
+.blog-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.blog-card:hover img {
+  transform: scale(1.05);
+}
+
+.blog-card-content {
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+  transition: 0.5s ease;
+}
+
+.blog-card:hover .blog-card-content {
+  bottom: 5%;
+}
+
+.blog-card-content-inner {
+  position: relative;
+  width: 80%;
+  margin-inline: auto;
+  background-color: rgb(var(--clr-light));
+  border-radius: 30px;
+  padding: 25px 30px 20px;
+}
+
+.blog-card:hover .blog-card-content-inner {
+  color: rgb(var(--clr-light));
+  background-color: rgb(var(--clr-accent));
+}
+
+.blog-card-content-inner time {
+  font-size: var(--fs-100);
+}
+
+.blog-card-content-inner h4 {
+  font-size: clamp(1rem, 1.5vw + 0.5rem, 1.25rem);
+  line-height: 1.9;
 }
