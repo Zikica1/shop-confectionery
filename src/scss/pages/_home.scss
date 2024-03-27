@@ -626,6 +626,11 @@
 /* Blog */
 .blog-container {
   --gap: 4em;
+  --flow-gap: 4em;
+
+  @include smallSize2 {
+    grid-template-columns: repeat(auto-fit, minmax(min(270px, 100%), 1fr));
+  }
 }
 
 .blog h2 {
@@ -653,13 +658,19 @@
   bottom: 10%;
   width: 100%;
   transition: 0.5s ease;
+
+  @include largeSize {
+    bottom: 5%;
+  }
 }
 
 .blog-card:hover .blog-card-content {
-  bottom: 5%;
+  bottom: 2%;
 }
 
 .blog-card-content-inner {
+  --flow-gap: 1.25em;
+
   position: relative;
   width: 80%;
   margin-inline: auto;
@@ -680,4 +691,82 @@
 .blog-card-content-inner h4 {
   font-size: clamp(1rem, 1.5vw + 0.5rem, 1.25rem);
   line-height: 1.9;
+}
+
+/* shop */
+.shop {
+  background: url(../images/shop-img.jpg) no-repeat center center/cover;
+  padding: 6.25em 1.25em;
+  border-radius: 60px;
+  text-align: center;
+
+  @include smallSize2 {
+    padding: 10em 3.125em;
+  }
+}
+
+.shop h2 {
+  font-size: 1.875rem;
+  line-height: 1.2;
+}
+
+.shop h2 span {
+  font-size: clamp(1.875rem, 3.5vw + 1rem, 3.75rem);
+  margin-block: 1rem 2rem;
+}
+
+.shop form {
+  width: 13.75em;
+  margin-inline: auto;
+
+  @include smallSize2 {
+    display: flex;
+    align-items: center;
+    width: 55%;
+    background-color: rgb(var(--clr-light));
+    padding: 0.5em 1.25em;
+    border-radius: 40px;
+  }
+}
+
+.shop input {
+  --flow-gap: 0.75em;
+
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 1.25em;
+  font-family: inherit;
+  font-size: 0.875rem;
+  border-radius: 32px;
+  outline: none;
+
+  @include smallSize2 {
+    width: unset;
+    margin: 0;
+    // font-size: 1rem;
+  }
+}
+
+.shop form > :first-child::placeholder {
+  color: rgb(var(--clr-dark));
+}
+
+.shop form > :last-child {
+  cursor: pointer;
+  transition: 0.3s ease;
+  @include smallSize2 {
+    flex-basis: 10em;
+  }
+}
+
+.shop input[type='email'] {
+  @include smallSize2 {
+    flex: 1;
+  }
+}
+
+.shop form > :last-child:hover {
+  background-color: rgb(var(--clr-dark));
+  transform: scale(0.98);
 }
