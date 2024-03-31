@@ -1,0 +1,172 @@
+@use '../abstracts' as *;
+
+.main-about {
+  --flow-gap: 10.37em;
+
+  padding-inline: 2.1875em;
+}
+
+.about h2 {
+  text-align: center;
+  margin-block: 1.875rem 3.75rem;
+}
+
+.about-wrapper {
+  --gap: 6em;
+
+  @include smallSize2 {
+    --gap: 0;
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.col-1,
+.col-2 {
+  --flow-gap: 2em;
+}
+
+.col-1 {
+  @include smallSize2 {
+    --flow-gap: clamp(6.28em, 11vw, 10.62em);
+  }
+}
+
+.col-2 {
+  @include smallSize2 {
+    --flow-gap: clamp(5em, 11vw, 10.62em);
+  }
+}
+
+.col-1 {
+  @include smallSize2 {
+    border-right: 3px solid rgb(var(--clr-accent));
+  }
+}
+
+.col-img {
+  border-radius: 40px;
+}
+
+.col-img-1 {
+  @include smallSize2 {
+    margin-inline-end: 1.25em;
+  }
+}
+
+.col-img-2 {
+  @include smallSize2 {
+    margin-inline-start: 1.25em;
+  }
+}
+
+.col-content {
+  --gap: 1em;
+}
+
+.col-1 .col-content {
+  @media (min-width: 1300px) {
+    grid-template-columns: 1fr 25%;
+    align-items: start;
+  }
+}
+
+.col-2 .col-content {
+  @media (min-width: 1300px) {
+    grid-template-columns: 25% 1fr;
+  }
+}
+
+.col-year {
+  position: relative;
+  align-items: center;
+}
+
+.col-1 .col-year {
+  @include smallSize2 {
+    justify-self: end;
+  }
+
+  @media (min-width: 1300px) {
+    grid-column: 2;
+  }
+}
+
+.col-year .divider {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.col-1 .divider::before {
+  @include smallSize2 {
+    order: 2;
+  }
+}
+
+.col-year .divider::after {
+  content: '';
+  position: relative;
+  display: block;
+  width: 44px;
+  height: 3px;
+  background-color: rgb(var(--clr-accent));
+}
+
+.col-year .divider::before {
+  content: '';
+  position: relative;
+  width: 16px;
+  height: 16px;
+  background-color: rgb(var(--clr-accent));
+  border-radius: 50%;
+}
+
+.col-1 .col-year .divider::before {
+  @include smallSize2 {
+    right: 0;
+    left: unset;
+    transform: translateX(50%);
+  }
+}
+
+.col-1 .col-year .divider {
+  @include smallSize2 {
+    order: 2;
+  }
+}
+
+.col-2 .col-year .divider::before {
+  @include smallSize2 {
+    transform: translateX(-50%);
+  }
+}
+
+.col-content h3 {
+  line-height: 1.2;
+}
+
+.col-description {
+  --flow-gap: 1.875em;
+}
+
+.col-description p {
+  color: rgba(var(--clr-dark) / 0.7);
+}
+
+.col-2 .col-description {
+  @include smallSize2 {
+    padding-inline-start: 1.25em;
+  }
+}
+
+.col-1 .col-description {
+  @include smallSize2 {
+    padding-inline-end: 1.25em;
+  }
+
+  @media (min-width: 1300px) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}

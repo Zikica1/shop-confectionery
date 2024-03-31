@@ -2,17 +2,24 @@
 @use '../abstracts/mixin' as *;
 
 footer {
-  --flow-gap: 4.43em;
+  --flow-gap: 2em;
 
   margin-block-start: 5em;
   padding-inline: 2.1875em;
 }
 
-.footer-container {
+.footer-wrapper {
   position: relative;
+  padding-bottom: 3.125em;
+
   @include smallSize2 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    padding-bottom: 0;
+  }
+
+  @include largeSize {
+    --flow-gap: 0;
+
+    display: flex;
   }
 }
 
@@ -27,7 +34,36 @@ footer {
   background: rgba(var(--clr-dark) / 0.3);
 }
 
-.footer-container ul {
+footer .logo-img {
+  @include largeSize {
+    flex-basis: 19.1875em;
+    flex-grow: 1;
+  }
+}
+
+footer .logo-img img {
+  @include smallSize2 {
+    margin-inline: auto;
+  }
+
+  @include largeSize {
+    margin-inline: unset;
+  }
+}
+
+.footer-container {
+  @include smallSize2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include largeSize {
+    flex-basis: 44.8124em;
+    flex-grow: 999;
+  }
+}
+
+.footer-container ul:not(:last-child) {
   margin-block-end: 3.125em;
 }
 
@@ -46,9 +82,13 @@ footer {
 }
 
 div:has(.social-icons) {
-  --flow-gap: 1em;
-
+  flex-direction: column;
   padding-block: 1em;
+
+  @include smallSize2 {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .social-icons > *:not(:last-child) {

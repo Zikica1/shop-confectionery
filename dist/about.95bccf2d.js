@@ -142,13 +142,13 @@
       this[globalName] = mainExports;
     }
   }
-})({"iqNlW":[function(require,module,exports) {
+})({"k1YfZ":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "0bcb44a518dbc454";
+module.bundle.HMR_BUNDLE_ID = "5c5343e895bccf2d";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, chrome, browser, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -578,82 +578,8 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
     });
 }
 
-},{}],"1SICI":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "render", ()=>render);
-function render() {
-    const menuBtn = document.querySelector(".hamburger");
-    const nav = document.querySelector(".navigation-primary");
-    const closeBtn = document.querySelector(".close-button");
-    const shopBasket = document.querySelector(".shopping-basket");
-    const shopCart = document.querySelector(".shopping-cart");
-    const shopBtnClos = document.querySelector(".shopping-cart-btn");
-    let menuClick = false;
-    function handleActions() {
-        const windowWidth = window.innerWidth;
-        if (windowWidth < 768) shopCart.classList.toggle("action");
-        menuClick = true;
-    }
-    function toggleAction() {
-        menuBtn.classList.add("open");
-        nav.classList.toggle("show");
-        shopCart.classList.remove("action");
-    }
-    menuBtn.addEventListener("click", toggleAction);
-    shopBasket.addEventListener("click", ()=>{
-        handleActions();
-    });
-    closeBtn.addEventListener("click", ()=>{
-        nav.classList.remove("show");
-        menuBtn.classList.remove("open");
-    });
-    //shop button
-    shopBtnClos.addEventListener("click", ()=>{
-        if (menuClick) shopCart.classList.remove("action");
-        menuClick = false;
-    });
-    //scrollToTop-btn
-    const scrollTopButton = document.querySelector(".scrollToTop-btn");
-    window.addEventListener("scroll", ()=>{
-        scrollTopButton.classList.toggle("active", window.scrollY > 50);
-    });
-    scrollTopButton.addEventListener("click", ()=>{
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    });
-}
+},{}],"iAaBd":[function(require,module,exports) {
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || Object.prototype.hasOwnProperty.call(dest, key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
+},{}]},["k1YfZ","iAaBd"], "iAaBd", "parcelRequire03cd")
 
-},{}]},["iqNlW"], null, "parcelRequire03cd")
-
-//# sourceMappingURL=main.18dbc454.js.map
+//# sourceMappingURL=about.95bccf2d.js.map

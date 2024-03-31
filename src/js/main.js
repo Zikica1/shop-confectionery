@@ -43,4 +43,16 @@ export function render() {
 
     menuClick = false;
   });
+
+  //scrollToTop-btn
+  const scrollTopButton = document.querySelector('.scrollToTop-btn');
+
+  window.addEventListener('scroll', () => {
+    scrollTopButton.classList.toggle('active', window.scrollY > 50);
+  });
+
+  scrollTopButton.addEventListener('click', () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  });
 }

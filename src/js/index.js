@@ -137,12 +137,6 @@ gsap.from(landingImg4, {
     end: 'bottom 40%',
     markers: false,
     scrub: false,
-    onEnter: () => {
-      landingImg4.style.willChange = 'transform,opacity';
-    },
-    onLeave: () => {
-      landingImg4.style.willChange = 'auto';
-    },
   },
   opacity: 0,
   scale: 0.9,
