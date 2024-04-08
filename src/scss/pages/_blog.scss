@@ -1,0 +1,14 @@
+@use '../abstracts' as *;
+
+.main-blog {
+  --flow-gap: 5.625em;
+
+  padding-inline: 2.1875em;
+  margin-block-start: 3.4375em;
+}
+
+.main-blog .blog-container {
+  @include smallSize2 {
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  }
+}

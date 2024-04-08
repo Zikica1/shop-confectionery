@@ -1867,10 +1867,22 @@ div:has(.social-icons) {
   font-size: 1.75rem;
 }
 
+@media (width >= 48rem) {
+  .contact-form h2 {
+    font-size: clamp(1.875rem, 1.5vw + 1rem, 2.1875rem);
+  }
+}
+
 .contact-form h2 span {
   margin-block: .44em .5em;
   font-size: 2rem;
   line-height: 1.31;
+}
+
+@media (width >= 48rem) {
+  .contact-form h2 span {
+    font-size: clamp(50px, 3.5vw + 1rem, 60px);
+  }
 }
 
 .contact-form p {
@@ -2041,6 +2053,18 @@ div:has(.social-icons) {
 
 .details-card:hover .details-content {
   color: rgb(var(--clr-light));
+}
+
+.main-blog {
+  --flow-gap: 5.625em;
+  margin-block-start: 3.4375em;
+  padding-inline: 2.1875em;
+}
+
+@media (width >= 48rem) {
+  .main-blog .blog-container {
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  }
 }
 
 /*# sourceMappingURL=index.b10d73a7.css.map */
