@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="scss/main.scss" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      defer
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script type="module" src="js/blog.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--Scroll to top button-->
+    <div class="scrollToTop-btn">
+      <i class="fas fa-arrow-up"></i>
+    </div>
+    <!--Header-->
+    <header class="header-primary">
+      <div class="header-data-export bg-dark text-light flex flex--home">
+        <div class="login flex">
+          <span class="">Login</span>
+          <span class="">Signup</span>
+        </div>
+        <div class="contact">
+          <div class="flex">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14.467"
+              height="19.544"
+              viewBox="0 0 14.467 19.544"
+            >
+              <path
+                d="M76.386,19.544H71.081A4.586,4.586,0,0,1,66.5,14.963V4.581A4.586,4.586,0,0,1,71.081,0h5.306a4.586,4.586,0,0,1,4.581,4.581V14.963A4.586,4.586,0,0,1,76.386,19.544ZM71.081,1.527a3.057,3.057,0,0,0-3.054,3.054V14.963a3.057,3.057,0,0,0,3.054,3.054h5.306a3.057,3.057,0,0,0,3.054-3.054V4.581a3.057,3.057,0,0,0-3.054-3.054Zm2.71,12.864a.954.954,0,1,0,.954.954A.954.954,0,0,0,73.791,14.39Z"
+                transform="translate(-66.5)"
+                fill="rgba(255 255 255)"
+              ></path>
+            </svg>
+            <p>+2 69.36222</p>
+          </div>
+          <div class="flex">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="17.767"
+              height="14.191"
+              viewBox="0 0 17.767 14.191"
+            >
+              <path
+                d="M8.884,36.451A4.265,4.265,0,0,1,6.318,35.6l-2.7-2.024a.823.823,0,1,1,.987-1.316l2.7,2.024a2.636,2.636,0,0,0,3.155,0l2.7-2.025a.823.823,0,1,1,.987,1.316l-2.7,2.024A4.263,4.263,0,0,1,8.884,36.451Zm8.883-.162v-4.32a4.941,4.941,0,0,0-4.935-4.935h-7.9A4.941,4.941,0,0,0,0,31.969V36.29a4.941,4.941,0,0,0,4.935,4.935h7.9a4.941,4.941,0,0,0,4.935-4.935Zm-4.935-7.611a3.294,3.294,0,0,1,3.29,3.29V36.29a3.294,3.294,0,0,1-3.29,3.29h-7.9a3.294,3.294,0,0,1-3.29-3.29V31.969a3.294,3.294,0,0,1,3.29-3.29Z"
+                transform="translate(0 -27.034)"
+                fill="rgba(255 255 255)"
+              ></path>
+            </svg>
+            <p>candyshop@google.com</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="navigation flex">
+        <div class="logo flex">
+          <img src="images/Logo.png" alt="logo-img" />
+        </div>
+
+        <nav class="navigation-primary">
+          <div class="nav-body flex">
+            <div class="close-button-wrapper">
+              <div class="close-button"></div>
+            </div>
+
+            <div class="anim1">
+              <ul class="flow">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">Shop</a></li>
+                <li class="action"><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="shopping-basket">
+          <span class="text-light fs-100" style="font-weight: 600"
+            >Basket (0)</span
+          >
+          <img src="images/header/shopping-bag.png" alt="" />
+        </div>
+
+        <div class="shopping-cart">
+          <div class="flex">
+            <p class="text-light-dark">Shopping Basket</p>
+            <div class="shopping-cart-btn">
+              <img src="images/header/close-btn.svg" alt="" />
+            </div>
+          </div>
+          <div class="shopping-cart-img grid">
+            <img src="images/header/shopping-cart.svg" alt="shopping-card" />
+            <p class="text-light-dark">cart is empty</p>
+          </div>
+        </div>
+
+        <!--Hamburger-->
+        <button type="submit" class="hamburger">
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </button>
+      </div>
+    </header>
+    <!--Main-->
+    <main class="main-blog-articles flow">
+      <!--Blog-articles-->
+      <section class="blog-articles grid">
+        <img
+          class="active"
+          src="images/blog-articles/blog-articles-1.jpg"
+          alt=""
+        />
+        <img src="images/blog-articles/blog-articles-2.jpg" alt="" />
+
+        <article class="article article-1 flow">
+          <h1>
+            Grass by the trickling stream; and, as I lie close to the earth
+          </h1>
+
+          <div class="info flex">
+            <div class="data">
+              <time datetime="2021-03-17T07:36:46+00:00">March 17, 2021</time>
+            </div>
+            <div class="author">
+              <span>By</span>
+            </div>
+            <div class="business">
+              <a href="#">business</a>
+            </div>
+          </div>
+          <div class="content flow">
+            <p class="fs-100 fw-500">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint
+              neque consequuntur molestiae ad quidem, quia voluptates maiores
+              repudiandae illo eveniet inventore provident totam atque
+              architecto nulla ipsum iste iure similique nobis pariatur
+              eligendi? Tempore porro beatae impedit consequatur id minima
+              omnis, perferendis nemo, quo ex iusto delectus non alias.
+              Exercitationem ut repellat, itaque nihil, cum eveniet et quaerat,
+              cupiditate hic laborum atque nostrum culpa enim quibusdam saepe?
+              Tenetur dicta nihil tempore nisi vel? Eaque, voluptatum! Neque
+              illo aut nobis, tenetur corrupti temporibus accusamus molestias
+              deserunt? Porro, voluptatem eaque dolore expedita facere quia!
+              Optio aspernatur mollitia dignissimos iste quas atque eveniet
+              officia veritatis, quae repellendus incidunt porro enim modi
+              labore. Dolor consectetur aliquam natus libero, ullam consequuntur
+              assumenda ad dolore laborum corrupti, deleniti facere a voluptate.
+              Quisquam corporis perspiciatis esse repellendus minus tenetur
+              illum praesentium velit magni quae, consequuntur fuga amet,
+              reprehenderit quos quo fugiat eligendi eum odio ipsam! Id
+              consectetur, maxime voluptates quos aliquam earum ducimus quidem?
+              Distinctio consequuntur quasi totam dicta nostrum ex nesciunt
+              dolores error consequatur, illo voluptates sequi quis aut
+              doloremque possimus architecto debitis. Earum, similique iste.
+            </p>
+            <p class="fs-100 fw-500">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Doloremque aut excepturi vitae voluptatum debitis unde iure
+              exercitationem a recusandae officia molestiae illo, voluptate
+              eveniet eligendi dolore atque laudantium, obcaecati ea voluptates,
+              saepe sapiente dicta maxime? Dolorum incidunt totam quisquam ipsum
+              nemo quae porro obcaecati! Neque impedit quisquam accusantium
+              quibusdam voluptatem, voluptates maxime libero mollitia vel
+              incidunt esse possimus ullam dignissimos. Temporibus beatae
+              sapiente rerum aperiam non, veniam excepturi reprehenderit
+              blanditiis sint nesciunt accusantium repellat assumenda fugit
+              ipsam voluptate dolores nisi porro eius omnis quidem tempore
+              quasi. Quis, excepturi minus!
+            </p>
+            <p class="fs-100 fw-500">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel,
+              asperiores dicta veritatis recusandae necessitatibus culpa omnis
+              temporibus. Voluptatibus sit beatae, incidunt eos pariatur
+              doloribus laboriosam sapiente nam quibusdam illum odio, dolorem
+              consequatur obcaecati ullam culpa. Aperiam possimus odio voluptas
+              autem iste, numquam perspiciatis quam ipsum, nulla beatae fuga
+              suscipit quibusdam!
+            </p>
+            <p class="fs-100 fw-500">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Perspiciatis ea labore vero cum velit nobis recusandae et quisquam
+              corrupti quos eveniet sit vitae, suscipit at aspernatur! Vero
+              delectus rem itaque iure ipsum repellendus ducimus, dicta placeat
+              alias tempore praesentium quo nihil officia voluptatum sit totam
+              dolorum quisquam distinctio vel beatae quibusdam perspiciatis
+              labore? Ad placeat, iure nemo ab deserunt nostrum doloremque
+              temporibus rem quod pariatur repellat maxime at vero reiciendis
+              voluptatum, quam aperiam doloribus explicabo itaque atque labore.
+              Ut odio corporis quos reprehenderit possimus expedita reiciendis
+              modi illo distinctio quia!
+            </p>
+          </div>
+          <footer class="footer-sec flex">
+            <p class="fw-600">Tags: Blog</p>
+            <div class="share flex">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 26 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4.67788 6.84487C4.22518 7.29755 3.86609 7.83497 3.62109 8.42644C3.3761 9.01791 3.25 9.65184 3.25 10.292C3.25 10.9322 3.3761 11.5662 3.62109 12.1576C3.86609 12.7491 4.22518 13.2865 4.67788 13.7392L13 22.0614L21.3222 13.7392C22.2365 12.825 22.7501 11.585 22.7501 10.292C22.7501 8.9991 22.2365 7.75911 21.3222 6.84487C20.408 5.93062 19.168 5.417 17.875 5.417C16.5821 5.417 15.3421 5.93062 14.4279 6.84487L13 8.2727L11.5722 6.84487C11.1195 6.39218 10.5821 6.03308 9.99064 5.78809C9.39917 5.54309 8.76524 5.41699 8.12504 5.41699C7.48484 5.41699 6.85091 5.54309 6.25945 5.78809C5.66798 6.03308 5.13056 6.39218 4.67788 6.84487Z"
+                  stroke="#000000"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 28 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.68408 14.0924C8.88608 13.6884 9.00008 13.2324 9.00008 12.7504C9.00008 12.2684 8.88608 11.8124 8.68408 11.4084M8.68408 14.0924C8.38178 14.6967 7.88428 15.1814 7.27217 15.4677C6.66007 15.7541 5.96921 15.8254 5.31152 15.6701C4.65384 15.5148 4.06785 15.1419 3.64849 14.612C3.22914 14.0821 3.00098 13.4261 3.00098 12.7504C3.00098 12.0746 3.22914 11.4186 3.64849 10.8887C4.06785 10.3588 4.65384 9.98596 5.31152 9.83066C5.96921 9.67535 6.66007 9.74665 7.27217 10.033C7.88428 10.3193 8.38178 10.804 8.68408 11.4084M8.68408 14.0924L15.3161 17.4084M8.68408 11.4084L15.3161 8.09236M15.3161 17.4084C14.9602 18.1202 14.9016 18.9443 15.1533 19.6993C15.4049 20.4543 15.9462 21.0784 16.6581 21.4344C17.3699 21.7903 18.194 21.8488 18.949 21.5972C19.704 21.3455 20.3282 20.8042 20.6841 20.0924C21.04 19.3805 21.0986 18.5564 20.8469 17.8014C20.5952 17.0464 20.0539 16.4223 19.3421 16.0664C18.9896 15.8901 18.6059 15.785 18.2128 15.7571C17.8197 15.7292 17.425 15.7789 17.0511 15.9035C16.2961 16.1552 15.672 16.6965 15.3161 17.4084ZM15.3161 8.09236C15.4923 8.44476 15.7362 8.759 16.0339 9.01714C16.3316 9.27527 16.6772 9.47225 17.051 9.59682C17.4248 9.72139 17.8195 9.77111 18.2125 9.74315C18.6055 9.71519 18.9892 9.61009 19.3416 9.43386C19.694 9.25762 20.0082 9.01371 20.2664 8.71603C20.5245 8.41835 20.7215 8.07274 20.846 7.69894C20.9706 7.32514 21.0203 6.93046 20.9924 6.53744C20.9644 6.14442 20.8593 5.76076 20.6831 5.40836C20.3272 4.69665 19.7031 4.15548 18.9482 3.9039C18.1932 3.65232 17.3693 3.71094 16.6576 4.06686C15.9459 4.42278 15.4047 5.04685 15.1531 5.80177C14.9015 6.5567 14.9602 7.38065 15.3161 8.09236Z"
+                  stroke="#202020"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </footer>
+        </article>
+      </section>
+      <!--Shop-->
+      <section class="shop">
+        <h2 class="ff-sans-con text-accent fw-400 title">
+          Get Started
+          <span
+            class="fs-500 ff-sans-serif fw-800 text-light"
+            style="display: block"
+            >Great Customers Are Using The Confectionery Shop</span
+          >
+        </h2>
+        <form class="flow" role="search">
+          <input type="email" placeholder="Enter Your Email Address" required />
+          <input
+            class="bg-accent text-light fw-500"
+            type="submit"
+            value="Subscribe"
+          />
+        </form>
+      </section>
+    </main>
+    <!--Footer-->
+    <footer class="footer-primary flow">
+      <div class="footer-wrapper flow">
+        <div class="logo-img">
+          <img src="images/Logo.png" alt="" />
+        </div>
+
+        <div class="footer-container">
+          <ul>
+            <li><h3>Product</h3></li>
+            <li><a href="#">Universal Cake</a></li>
+            <li><a href="#">Candy</a></li>
+            <li><a href="#">Confectionery</a></li>
+            <li><a href="#">Gifts</a></li>
+          </ul>
+          <ul>
+            <li><h3>Company</h3></li>
+            <li><a href="#">Condition</a></li>
+            <li><a href="#">Open A Shop</a></li>
+            <li><a href="#">Licensing & Tems</a></li>
+            <li><a href="#">Technology</a></li>
+          </ul>
+          <ul>
+            <li><h3>About</h3></li>
+            <li><a href="#">Our Mission</a></li>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Our Culture</a></li>
+            <li><a href="#">Team</a></li>
+          </ul>
+          <ul>
+            <li><h3>Support</h3></li>
+            <li><a href="#">Our Mission</a></li>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Our Culture</a></li>
+            <li><a href="#">Team</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex">
+        <p>Copyright &copy; 2024. AllRights Reserved.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

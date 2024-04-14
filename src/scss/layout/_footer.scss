@@ -1,7 +1,7 @@
 @use '../abstracts/colors' as *;
 @use '../abstracts/mixin' as *;
 
-footer {
+.footer-primary {
   --flow-gap: 2em;
 
   margin-block-start: 5em;
@@ -34,14 +34,14 @@ footer {
   background: rgba(var(--clr-dark) / 0.3);
 }
 
-footer .logo-img {
+.footer-primary .logo-img {
   @include largeSize {
     flex-basis: 19.1875em;
     flex-grow: 1;
   }
 }
 
-footer .logo-img img {
+.footer-primary .logo-img img {
   @include smallSize2 {
     margin-inline: auto;
   }

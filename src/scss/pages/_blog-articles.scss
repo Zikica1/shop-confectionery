@@ -1,0 +1,94 @@
+@use '../abstracts' as *;
+
+.main-blog-articles {
+  --flow-gap: 4.375em;
+
+  padding-inline: 2.1875em;
+  margin-block-start: 4.375em;
+}
+
+.blog-articles {
+  --gap: 4.375em;
+
+  grid-template-areas:
+    'image'
+    'content';
+}
+
+.blog-articles img {
+  display: none;
+  border-radius: 30px;
+  grid-area: image;
+}
+
+.blog-articles img.active {
+  display: block;
+}
+
+.main-blog-articles .article {
+  --flow-gap: 2.1875em;
+
+  grid-area: content;
+  max-width: 55em;
+  margin-inline: auto;
+}
+
+.main-blog-articles .article h1 {
+  text-align: center;
+  font-size: 1.75rem;
+
+  @include smallSize2 {
+    font-size: clamp(2.375rem, 5vw, 3.125rem);
+    line-height: 1.2;
+  }
+}
+
+.main-blog-articles .article .info {
+  --gap: 1em;
+
+  justify-content: center;
+}
+
+.article .info > *:not(:last-child) {
+  position: relative;
+  padding-inline-end: 0.9375em;
+}
+
+.article .info :is(.data, .author)::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 50%;
+  right: 0;
+  bottom: 5px;
+  background-color: rgb(var(--clr-dark));
+}
+
+.main-blog-articles .content {
+  --flow-gap: 1.875em;
+  margin-inline: 5%;
+
+  @include middleSize {
+    margin-inline: 0;
+  }
+}
+
+.article .footer-sec {
+  justify-content: space-between;
+  border-top: 1px solid rgba(var(--clr-dark) / 0.2);
+  border-bottom: 1px solid rgba(var(--clr-dark) / 0.2);
+  padding-block: 1.875em;
+}
+
+.article .footer-sec .share {
+  --gap: 1em;
+}
+
+.footer-sec .share > *:hover {
+  cursor: pointer;
+}
+
+.footer-sec .share > *:hover path {
+  cursor: pointer;
+  stroke: rgb(var(--clr-accent));
+}
