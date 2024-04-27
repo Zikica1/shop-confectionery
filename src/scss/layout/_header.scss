@@ -16,7 +16,6 @@
 
 .navigation {
   padding: 1.875em 2.1875em;
-  // overflow: hidden;
 }
 
 .flex--home {
@@ -91,6 +90,7 @@
   z-index: 99;
   inset: 0;
   padding-block-start: 7em;
+  height: 100vh;
   height: 100svh;
   background: rgba(var(--clr-light));
   opacity: 0;
@@ -111,6 +111,10 @@
 .show {
   opacity: 1;
   visibility: visible;
+}
+
+.no-scroll {
+  overflow-y: hidden;
 }
 
 .nav-body {

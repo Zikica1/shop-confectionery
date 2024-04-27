@@ -21,6 +21,7 @@ export function render() {
     menuBtn.classList.add('open');
     nav.classList.toggle('show');
     shopCart.classList.remove('action');
+    document.body.classList.add('no-scroll');
   }
 
   menuBtn.addEventListener('click', toggleAction);
@@ -32,6 +33,7 @@ export function render() {
   closeBtn.addEventListener('click', () => {
     nav.classList.remove('show');
     menuBtn.classList.remove('open');
+    document.body.classList.remove('no-scroll');
   });
 
   //shop button
