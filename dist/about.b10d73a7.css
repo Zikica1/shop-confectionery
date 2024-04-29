@@ -2268,7 +2268,7 @@ div:has(.social-icons) {
 }
 
 .featured-product-container.current-cate {
-  display: block !important;
+  display: block;
 }
 
 .featured-product-container .card-sales {
