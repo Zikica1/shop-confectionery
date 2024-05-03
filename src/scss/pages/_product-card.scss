@@ -1,0 +1,88 @@
+@use '../abstracts' as *;
+
+.main-product {
+  padding-inline: 2.1875em;
+}
+
+.product-card {
+  padding-block: 35px;
+  margin-block: 40px;
+}
+
+.product-card-img {
+  justify-self: center;
+}
+
+.product-slider {
+  overflow: hidden;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.product-slides {
+  --gap: 0;
+
+  width: 300%;
+}
+
+.product-slides input {
+  position: absolute;
+  left: -1000px;
+}
+
+.product-slide {
+  width: 33.3333%;
+  border-radius: 30px;
+}
+
+.product-slide img {
+  width: 100%;
+  border-radius: 30px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.product-thumbs {
+  grid-template-columns: repeat(3, 1fr);
+  padding-inline-end: 3em;
+  margin-block-start: 1em;
+}
+
+.product-thumbs li {
+  opacity: 0.5;
+  transition: 0.3s ease;
+}
+
+.product-thumbs li:hover {
+  opacity: 1;
+}
+
+.product-thumbs li.current {
+  opacity: 1;
+}
+
+.product-thumbs label {
+  cursor: pointer;
+}
+
+.product-thumbs img {
+  border-radius: 20px;
+  width: 95%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+  transition: 350ms ease;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -33.33%;
+  transition: 350ms ease;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -66.66%;
+  transition: 350ms ease;
+}
