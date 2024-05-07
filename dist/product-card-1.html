@@ -8,7 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer=""></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer=""></script>
-    <script src="/shop.65ff09b0.js" defer=""></script>
+    <script src="/product-card-1.ebeb6277.js" defer=""></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
@@ -97,8 +97,8 @@
 
     <!--Main-->
     <main class="main-product flow">
-      <!--Shop-card-->
-      <section class="product-card">
+      <!--Product-card-->
+      <section class="product-card flow">
         <div class="product-card-img">
           <div class="product-slider">
             <div class="product-slides flex">
@@ -138,9 +138,224 @@
             </ul>
           </div>
         </div>
-        <div class="product-card-desc"></div>
+        <div class="product-card-desc">
+          <h2>Cereal Donut</h2>
+          <p class="fs-800 text-accent fw-700">
+            $16.00 <del class="fs-100 fw-400"><span>$28.00</span></del>
+          </p>
+
+          <div class="stars-wrapper flex">
+            <div>
+              <span><i class="fa-solid fa-star"></i></span>
+              <span><i class="fa-solid fa-star"></i></span>
+              <span><i class="fa-solid fa-star"></i></span>
+              <span><i class="fa-solid fa-star"></i></span>
+              <span><i class="fa-solid fa-star"></i></span>
+            </div>
+            <a class="fs-100 fw-500">
+              (
+              <span class="count">3</span>
+              customer reviews)
+            </a>
+          </div>
+          <p class="fs-100">
+            Classic breakfast treat! Fluffy and tender donuts are coated in a
+            sweet and crunchy cereal topping, making for a breakfast that's both
+            fun and satisfying
+          </p>
+
+          <div class="quantity-container">
+            <div class="quantity">
+              <button id="decrement" class="quantity-btn decrement">
+                <span class="fa"></span>
+              </button>
+              <input type="number" min="1" max="100" step="1" value="1" id="input-count" readonly="">
+              <button id="increment" class="quantity-btn increment">
+                <span class="fa"></span>
+              </button>
+            </div>
+
+            <button class="btn btn-add">
+              <span class="text"> Add to Cart </span>
+              <span class="overlay"></span>
+            </button>
+          </div>
+
+          <div class="buttons-wrapper">
+            <button class="wishlist">
+              <span class="text-wl ff-sans-serif fs-210 fw-500">Add To Wishlist</span>
+              <span class="fa wishlist-ic"></span>
+            </button>
+            <button class="share">
+              <span class="text-sh fs-210 fw-600 ff-sans-serif">Share</span>
+              <span class="share-ic">
+                <svg width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.75 22.9167C17.8819 22.9167 17.1441 22.6128 16.5365 22.0052C15.9288 21.3976 15.625 20.6597 15.625 19.7917C15.625 19.6701 15.6337 19.5443 15.651 19.4141C15.6684 19.2838 15.6944 19.1667 15.7292 19.0625L8.38542 14.7917C8.09028 15.0521 7.76042 15.2561 7.39583 15.4036C7.03125 15.5512 6.64931 15.625 6.25 15.625C5.38194 15.625 4.6441 15.3212 4.03646 14.7135C3.42882 14.1059 3.125 13.3681 3.125 12.5C3.125 11.6319 3.42882 10.8941 4.03646 10.2865C4.6441 9.67881 5.38194 9.375 6.25 9.375C6.64931 9.375 7.03125 9.44878 7.39583 9.59635C7.76042 9.74392 8.09028 9.94791 8.38542 10.2083L15.7292 5.9375C15.6944 5.83333 15.6684 5.71614 15.651 5.58593C15.6337 5.45572 15.625 5.32986 15.625 5.20833C15.625 4.34027 15.9288 3.60243 16.5365 2.99479C17.1441 2.38715 17.8819 2.08333 18.75 2.08333C19.6181 2.08333 20.3559 2.38715 20.9635 2.99479C21.5712 3.60243 21.875 4.34027 21.875 5.20833C21.875 6.07638 21.5712 6.81423 20.9635 7.42187C20.3559 8.02951 19.6181 8.33333 18.75 8.33333C18.3507 8.33333 17.9687 8.25954 17.6042 8.11197C17.2396 7.9644 16.9097 7.76041 16.6146 7.5L9.27083 11.7708C9.30556 11.875 9.3316 11.9922 9.34896 12.1224C9.36632 12.2526 9.375 12.3785 9.375 12.5C9.375 12.6215 9.36632 12.7474 9.34896 12.8776C9.3316 13.0078 9.30556 13.125 9.27083 13.2292L16.6146 17.5C16.9097 17.2396 17.2396 17.0356 17.6042 16.888C17.9687 16.7404 18.3507 16.6667 18.75 16.6667C19.6181 16.6667 20.3559 16.9705 20.9635 17.5781C21.5712 18.1858 21.875 18.9236 21.875 19.7917C21.875 20.6597 21.5712 21.3976 20.9635 22.0052C20.3559 22.6128 19.6181 22.9167 18.75 22.9167ZM18.75 6.25C19.0451 6.25 19.2925 6.15017 19.4922 5.95052C19.6918 5.75086 19.7917 5.50347 19.7917 5.20833C19.7917 4.91319 19.6918 4.66579 19.4922 4.46614C19.2925 4.26649 19.0451 4.16666 18.75 4.16666C18.4549 4.16666 18.2075 4.26649 18.0078 4.46614C17.8082 4.66579 17.7083 4.91319 17.7083 5.20833C17.7083 5.50347 17.8082 5.75086 18.0078 5.95052C18.2075 6.15017 18.4549 6.25 18.75 6.25ZM6.25 13.5417C6.54514 13.5417 6.79253 13.4418 6.99219 13.2422C7.19184 13.0425 7.29167 12.7951 7.29167 12.5C7.29167 12.2049 7.19184 11.9575 6.99219 11.7578C6.79253 11.5582 6.54514 11.4583 6.25 11.4583C5.95486 11.4583 5.70747 11.5582 5.50781 11.7578C5.30816 11.9575 5.20833 12.2049 5.20833 12.5C5.20833 12.7951 5.30816 13.0425 5.50781 13.2422C5.70747 13.4418 5.95486 13.5417 6.25 13.5417ZM18.75 20.8333C19.0451 20.8333 19.2925 20.7335 19.4922 20.5338C19.6918 20.3342 19.7917 20.0868 19.7917 19.7917C19.7917 19.4965 19.6918 19.2491 19.4922 19.0495C19.2925 18.8498 19.0451 18.75 18.75 18.75C18.4549 18.75 18.2075 18.8498 18.0078 19.0495C17.8082 19.2491 17.7083 19.4965 17.7083 19.7917C17.7083 20.0868 17.8082 20.3342 18.0078 20.5338C18.2075 20.7335 18.4549 20.8333 18.75 20.8333Z" fill="black"></path>
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
       </section>
 
+      <!--Product-description-->
+      <section class="product-description">
+        <header class="product-header">
+          <ul class="flex">
+            <li class="text-light fw-500 tab-title active" role="tab">
+              Description
+            </li>
+            <li class="text-light fw-500 tab-title" role="tab">
+              Additional information
+            </li>
+            <li class="text-light fw-500 tab-title" role="tab">
+              Reviews <span>3</span>
+            </li>
+          </ul>
+        </header>
+        <div class="product-desc-inner">
+          <article class="description">
+            <h2>Fruity Cereal Donuts</h2>
+            <p>
+              These donuts are a playful and colorful twist on a classic
+              breakfast treat! Fluffy and tender donuts are coated in a sweet
+              and crunchy cereal topping, making for a breakfast that's both fun
+              and satisfying.
+            </p>
+
+            <h3>Ingredients</h3>
+            <ul>
+              <li>1 cup fruit flavored rice cereal</li>
+              <li>¾ cup milk</li>
+              <li>2 ¼ cups powdered sugar, sifted</li>
+            </ul>
+
+            <h3>donuts</h3>
+            <ul>
+              <li>2 ½ cups all purpose flour</li>
+              <li>1 cup fruit flavored rice cereal, finely crushed</li>
+              <li>1 ½ teaspoons baking powder</li>
+              <li>¼ teaspoon baking soda</li>
+              <li>½ teaspoon kosher salt</li>
+              <li>1 cup granulated sugar</li>
+              <li>½ cup vegetable oil</li>
+              <li>2 large eggs</li>
+              <li>1 cup milk</li>
+              <li>½ teaspoon vanilla extract</li>
+            </ul>
+
+            <h3>topping</h3>
+            <ul>
+              <li>1 ½ cups fruit flavored rice cereal</li>
+            </ul>
+
+            <h3>Nutirtion Info</h3>
+            <ul>
+              <li>Calories 401</li>
+              <li>Fat 12g</li>
+              <li>Carbs 68g</li>
+              <li>Fiber 0g</li>
+              <li>Sugar 38g</li>
+              <li>Protein 5g</li>
+            </ul>
+          </article>
+
+          <article class="additional">
+            <h3>Preparation</h3>
+            <ul>
+              <li>
+                Preheat the oven to 425˚F (220˚C). Grease the donut pans with
+                nonstick spray.
+              </li>
+              <li>
+                In a medium bowl, combine the cereal and milk for the glaze. Set
+                aside to soak while you make the donuts, about 20 minutes.
+                Strain into a clean bowl, pressing on the cereal to extract as
+                much milk as possible.
+              </li>
+              <li>
+                Make the donuts: In a medium bowl, combine the flour, crushed
+                cereal, baking powder, baking soda, and salt. Stir to combine.
+              </li>
+              <li>
+                In a large bowl, whisk together the sugar, vegetable oil, eggs,
+                milk, and vanilla. Add the dry ingredients and whisk until there
+                are no lumps.
+              </li>
+              <li>
+                Transfer the batter to a piping bag or zip-top bag with a corner
+                cut off. Pipe the batter into the prepared donut pans. Leave
+                about ¼ inch (6 ml) from the rim, so they don’t overflow.
+              </li>
+              <li>
+                Bake for 9-10 minutes, until the donuts are just beginning to
+                turn golden brown around the edges and a toothpick inserted in
+                the center comes out clean. Let cool in the pan for 5 minutes,
+                then transfer to a wire rack to continue cooling for about 20
+                minutes.
+              </li>
+              <li>
+                Make the glaze: In a medium bowl, combine the powdered sugar and
+                ¼ cup of the cereal milk. Whisk until smooth.
+              </li>
+              <li>Add the cereal for topping to a shallow dish.</li>
+              <li>
+                Once cooled, dip the tops of the donuts into the glaze, then
+                into the cereal. Set on a wire rack set over a baking pan to dry
+                for at least 20 minutes, until the glaze is no longer shiny
+              </li>
+            </ul>
+          </article>
+
+          <article class="Reviews">
+            <h3>3 reviews for Cereal Donut</h3>
+            <ul>
+              <li>
+                <div class="review">
+                  <img src="/avatar.7ad20e4a.png" alt="avatar" class="avatar">
+
+                  <div class="publish-data">
+                    <h4>Anne-Marie</h4>
+                    <time datetime="2023-03-31T06:05:37+00:00">March 31, 2023</time>
+                  </div>
+                </div>
+                <p>
+                  These are so good, and wicked easy to make. I've swapped in
+                  other cereals and they've all been amazing!!
+                </p>
+              </li>
+              <li>
+                <div class="review">
+                  <img src="/avatar.7ad20e4a.png" alt="avatar" class="avatar">
+
+                  <div class="publish-data">
+                    <h4>Sierra Braun</h4>
+                    <time datetime="2023-04-15T06:05:37+00:00">April 15, 2023</time>
+                  </div>
+                </div>
+                <p>
+                  wow! these are amazing! i didn't make them with cereal, still
+                  worked the same! i also made them in muffin tins.
+                </p>
+              </li>
+              <li>
+                <div class="review">
+                  <img src="/avatar.7ad20e4a.png" alt="avatar" class="avatar">
+
+                  <div class="publish-data">
+                    <h4>Sierra Braun</h4>
+                    <time datetime="2023-04-29T06:05:37+00:00">April 29, 2023</time>
+                  </div>
+                </div>
+                <p>
+                  It's a great simple recipe that u could use for any different
+                  flavor of donut I highly recommend
+                </p>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
       <!--Shop-->
       <section class="shop">
         <h2 class="ff-sans-con text-accent fw-400 title">
