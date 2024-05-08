@@ -28,15 +28,22 @@ btnCount.forEach((btn) => {
 
 //product-header - tab-title
 const tabs = document.querySelectorAll('.tab-title');
+const tabsContent = document.querySelectorAll('.tab-content');
 
 function handleChangeTitle(index) {
   tabs.forEach((tab) => tab.classList.remove('active'));
+
+  tabsContent.forEach((tab) => {
+    tab.classList.remove('active');
+  });
 
   tabs.forEach((tab, i) => {
     if (i === index) {
       tab.classList.add('active');
     }
   });
+
+  tabsContent[index].classList.add('active');
 }
 
 tabs.forEach((tab, i) => {

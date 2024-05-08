@@ -213,8 +213,8 @@
             </li>
           </ul>
         </header>
-        <div class="product-desc-inner">
-          <article class="description">
+        <div class="product-desc-inner text-light-dark">
+          <article class="description tab-content fs-100 flow active">
             <h2>Fruity Cereal Donuts</h2>
             <p>
               These donuts are a playful and colorful twist on a classic
@@ -223,14 +223,14 @@
               and satisfying.
             </p>
 
-            <h3>Ingredients</h3>
+            <h3 class="fs-200">Ingredients</h3>
             <ul>
               <li>1 cup fruit flavored rice cereal</li>
               <li>¾ cup milk</li>
               <li>2 ¼ cups powdered sugar, sifted</li>
             </ul>
 
-            <h3>donuts</h3>
+            <h3 class="fs-200">donuts</h3>
             <ul>
               <li>2 ½ cups all purpose flour</li>
               <li>1 cup fruit flavored rice cereal, finely crushed</li>
@@ -244,12 +244,12 @@
               <li>½ teaspoon vanilla extract</li>
             </ul>
 
-            <h3>topping</h3>
+            <h3 class="fs-200">topping</h3>
             <ul>
               <li>1 ½ cups fruit flavored rice cereal</li>
             </ul>
 
-            <h3>Nutirtion Info</h3>
+            <h3 class="fs-200">Nutirtion Info</h3>
             <ul>
               <li>Calories 401</li>
               <li>Fat 12g</li>
@@ -260,9 +260,9 @@
             </ul>
           </article>
 
-          <article class="additional">
-            <h3>Preparation</h3>
-            <ul>
+          <article class="additional tab-content">
+            <h3 class="text-dark">Preparation</h3>
+            <ul class="flow fs-100">
               <li>
                 Preheat the oven to 425˚F (220˚C). Grease the donut pans with
                 nonstick spray.
@@ -307,52 +307,75 @@
             </ul>
           </article>
 
-          <article class="Reviews">
+          <article class="reviews tab-content">
             <h3>3 reviews for Cereal Donut</h3>
             <ul>
-              <li>
-                <div class="review">
+              <li class="bg-light text-dark flow">
+                <div class="review flex">
                   <img src="/avatar.7ad20e4a.png" alt="avatar" class="avatar">
 
-                  <div class="publish-data">
+                  <div class="publish-data flex">
                     <h4>Anne-Marie</h4>
-                    <time datetime="2023-03-31T06:05:37+00:00">March 31, 2023</time>
+                    <time class="fs-100" datetime="2023-03-31T06:05:37+00:00">March 31, 2023</time>
                   </div>
                 </div>
-                <p>
+                <p class="fs-100 fw-500">
                   These are so good, and wicked easy to make. I've swapped in
                   other cereals and they've all been amazing!!
                 </p>
               </li>
-              <li>
-                <div class="review">
+              <li class="bg-light text-dark flow">
+                <div class="review flex">
                   <img src="/avatar.7ad20e4a.png" alt="avatar" class="avatar">
 
-                  <div class="publish-data">
-                    <h4>Sierra Braun</h4>
-                    <time datetime="2023-04-15T06:05:37+00:00">April 15, 2023</time>
+                  <div class="publish-data flex">
+                    <h4>Chaya Brook</h4>
+                    <time class="fs-100" datetime="2023-04-15T06:05:37+00:00">April 15, 2023</time>
                   </div>
                 </div>
-                <p>
+                <p class="fs-100 fw-500">
                   wow! these are amazing! i didn't make them with cereal, still
                   worked the same! i also made them in muffin tins.
                 </p>
               </li>
-              <li>
-                <div class="review">
+              <li class="bg-light text-dark flow">
+                <div class="review flex">
                   <img src="/avatar.7ad20e4a.png" alt="avatar" class="avatar">
 
-                  <div class="publish-data">
+                  <div class="publish-data flex">
                     <h4>Sierra Braun</h4>
-                    <time datetime="2023-04-29T06:05:37+00:00">April 29, 2023</time>
+                    <time class="fs-100" datetime="2023-04-29T06:05:37+00:00">April 29, 2023</time>
                   </div>
                 </div>
-                <p>
+                <p class="fs-100 fw-500">
                   It's a great simple recipe that u could use for any different
                   flavor of donut I highly recommend
                 </p>
               </li>
             </ul>
+
+            <div class="review-form">
+              <h3>Add a review</h3>
+              <form class="flow">
+                <div class="flow">
+                  <div>
+                    <label for="name">Name*</label>
+                    <input type="text" id="name">
+                  </div>
+                  <div>
+                    <label for="email">Email*</label>
+                    <input type="text" id="email">
+                  </div>
+                </div>
+
+                <div>
+                  <label for="review">Your review*</label>
+                  <textarea cols="40" rows="10" id="review"></textarea>
+                </div>
+
+                <button class="btn btn--accent" type="submit">Submit</button>
+              </form>
+            </div>
           </article>
         </div>
       </section>

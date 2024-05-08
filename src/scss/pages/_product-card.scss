@@ -1,15 +1,18 @@
 @use '../abstracts' as *;
 
 .main-product {
+  --flow-gap: 6.25em;
+
   padding-inline: 2.1875em;
+  margin-block-end: 4.375em;
 }
 
 /* product card */
 .product-card {
-  --flow-gap: 114px;
+  --flow-gap: 7.125em;
 
-  padding-block: 35px;
-  margin-block: 40px;
+  padding-block-start: 2.187em;
+  margin-block-start: 2.5em;
 }
 
 .product-card-img {
@@ -230,4 +233,113 @@
   color: rgb(var(--clr-accent));
   border-bottom: 3px solid rgb(var(--clr-accent));
   font-weight: 700;
+}
+
+.product-desc-inner {
+  background-color: rgb(242, 241, 236);
+  padding: 3.75em 1.875em 6.25em;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.description {
+  --flow-gap: 1.25em;
+}
+
+.description h2 {
+  color: rgb(var(--clr-dark));
+  font-size: 1.875rem;
+  margin-block-end: 1em;
+}
+
+.description h3 {
+  color: rgb(var(--clr-dark));
+}
+
+.additional h3 {
+  color: rgb(30, 30, 30);
+  font-size: 1.875rem;
+  margin-block-end: 1em;
+}
+
+.additional ul {
+  --flow-gap: 1.42em;
+}
+
+.additional ul li {
+  list-style-type: disc;
+}
+
+.reviews h3 {
+  color: #333;
+  font-size: 20px;
+  margin-block-end: 1em;
+}
+
+.reviews ul > *:not(:first-child) {
+  margin-top: 0.6em;
+}
+.reviews ul li {
+  --flow-gap: 40px;
+
+  padding: 40px 25px;
+  border-radius: 30px;
+}
+
+.reviews ul > *:nth-child(even) {
+  margin-inline-start: 1.56em;
+}
+
+.review img {
+  border-radius: 50%;
+}
+
+.publish-data {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.reviews li p {
+  line-height: 1.8;
+}
+
+.review-form {
+  --flow-gap: 35px;
+
+  margin-block-start: 3.75em;
+}
+
+.review-form h3 {
+  font-size: 1.312rem;
+  margin-block-end: 100px;
+}
+
+.review-form label {
+  display: block;
+  margin-block-end: 0.25em;
+  color: rgb(61, 61, 61);
+  font-weight: 500;
+}
+
+.review-form :is(input, textarea) {
+  width: 100%;
+  border: none;
+  font-size: 14px;
+  font-family: inherit;
+  padding: 14px;
+}
+
+.review-form input {
+  border-radius: 30px;
+  height: 60px;
+}
+
+.review-form textarea {
+  border-radius: 24px;
 }
