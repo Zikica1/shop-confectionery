@@ -49,3 +49,17 @@ function handleChangeTitle(index) {
 tabs.forEach((tab, i) => {
   tab.addEventListener('click', () => handleChangeTitle(i));
 });
+
+//rating
+
+document.addEventListener('DOMContentLoaded', function () {
+  const rateInputs = document.querySelectorAll('.rate input');
+
+  rateInputs.forEach(function (input) {
+    input.addEventListener('click', function () {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+      window.scrollTo(0, scrollTop);
+    });
+  });
+});

@@ -915,6 +915,12 @@ div:has(.social-icons) {
   overflow: hidden;
 }
 
+@media (width >= 48rem) {
+  .btn-add {
+    width: unset;
+  }
+}
+
 .btn-add .text {
   z-index: 1;
   position: relative;
@@ -2443,8 +2449,22 @@ div:has(.social-icons) {
   padding-block-start: 2.187em;
 }
 
+@media (width >= 48rem) {
+  .product-card {
+    grid-template-columns: 40% 1fr;
+    gap: 3em;
+    display: grid;
+  }
+}
+
 .product-card-img {
   justify-self: center;
+}
+
+@media (width >= 56.25rem) {
+  .product-card-img {
+    padding-inline: 2.187em;
+  }
 }
 
 .product-slider {
@@ -2516,6 +2536,12 @@ div:has(.social-icons) {
   transition: all .35s;
 }
 
+@media (width >= 48rem) {
+  .product-card-desc {
+    margin-top: 3em;
+  }
+}
+
 .product-card-desc > :not(:first-child) {
   margin-block-start: 1.062rem;
 }
@@ -2530,6 +2556,13 @@ div:has(.social-icons) {
 
 .product-card-desc a {
   color: rgba(var(--clr-dark) / .9);
+}
+
+@media (width >= 48rem) {
+  .quantity-container {
+    gap: 2em;
+    display: flex;
+  }
 }
 
 .quantity {
@@ -2630,12 +2663,25 @@ div:has(.social-icons) {
   flex-direction: column;
 }
 
+@media (width >= 48rem) {
+  .product-header ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
 .product-header ul li {
   cursor: pointer;
   transition: all .25 ease;
   margin-inline: 50px;
   padding: .66em;
   font-size: 1.125rem;
+}
+
+@media (width >= 48rem) {
+  .product-header ul li {
+    margin-inline: 0;
+  }
 }
 
 .product-header ul > :last-of-type span {
@@ -2659,6 +2705,12 @@ div:has(.social-icons) {
 .product-desc-inner {
   background-color: #f2f1ec;
   padding: 3.75em 1.875em 6.25em;
+}
+
+@media (width >= 56.25rem) {
+  .product-desc-inner {
+    padding: 4.5em 7.5em 5.81em;
+  }
 }
 
 .tab-content {
@@ -2700,11 +2752,23 @@ div:has(.social-icons) {
 .reviews h3 {
   color: #333;
   margin-block-end: 1em;
-  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+@media (width >= 48rem) {
+  .reviews h3 {
+    font-size: clamp(1.625rem, 3vw, 1.875rem);
+  }
 }
 
 .reviews ul > :not(:first-child) {
   margin-top: .6em;
+}
+
+@media (width >= 48rem) {
+  .reviews ul > :not(:first-child) {
+    margin-top: 1.25em;
+  }
 }
 
 .reviews ul li {
@@ -2717,6 +2781,12 @@ div:has(.social-icons) {
   margin-inline-start: 1.56em;
 }
 
+@media (width >= 56.25rem) {
+  .reviews ul > :nth-child(2n) {
+    margin-inline-start: 3em;
+  }
+}
+
 .review img {
   border-radius: 50%;
 }
@@ -2724,6 +2794,17 @@ div:has(.social-icons) {
 .publish-data {
   flex-direction: column;
   justify-content: space-between;
+}
+
+@media (width >= 48rem) {
+  .publish-data {
+    flex-direction: row;
+    flex: 1;
+  }
+
+  .publish-data h4 {
+    font-size: 1.25rem;
+  }
 }
 
 .reviews li p {
@@ -2738,6 +2819,12 @@ div:has(.social-icons) {
 .review-form h3 {
   margin-block-end: 100px;
   font-size: 1.312rem;
+}
+
+@media (width >= 48rem) {
+  .review-form h3 {
+    font-size: 1.5rem;
+  }
 }
 
 .review-form label {
@@ -2757,11 +2844,65 @@ div:has(.social-icons) {
 
 .review-form input {
   border-radius: 30px;
-  height: 60px;
+  height: 50px;
 }
 
 .review-form textarea {
   border-radius: 24px;
+}
+
+@media (width >= 48rem) {
+  .input-group {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1em;
+    display: grid;
+  }
+
+  .input-group > :last-child {
+    margin-top: 0;
+  }
+}
+
+.rating {
+  align-items: center;
+}
+
+.rate {
+  float: left;
+  height: 2.875em;
+  padding: 0 .625em;
+}
+
+.rate:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+}
+
+.rate:not(:checked) > label {
+  float: right;
+  white-space: nowrap;
+  cursor: pointer;
+  color: #ccc;
+  width: 1em;
+  font-size: 1.56rem;
+  overflow: hidden;
+}
+
+.rate:not(:checked) > label:before {
+  content: "★ ";
+}
+
+.rate > input:checked ~ label {
+  color: rgb(var(--clr-accent));
+}
+
+.rate:not(:checked) > label:hover, .rate:not(:checked) > label:hover ~ label {
+  color: #deb217;
+}
+
+.rate > input:checked + label:hover, .rate > input:checked + label:hover ~ label, .rate > input:checked ~ label:hover, .rate > input:checked ~ label:hover ~ label, .rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
 }
 
 /*# sourceMappingURL=about.b10d73a7.css.map */

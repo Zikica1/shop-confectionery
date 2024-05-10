@@ -13,10 +13,20 @@
 
   padding-block-start: 2.187em;
   margin-block-start: 2.5em;
+
+  @include smallSize2 {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    gap: 3em;
+  }
 }
 
 .product-card-img {
   justify-self: center;
+
+  @include middleSize {
+    padding-inline: 2.187em;
+  }
 }
 
 .product-slider {
@@ -93,6 +103,12 @@
   transition: 350ms ease;
 }
 
+.product-card-desc {
+  @include smallSize2 {
+    margin-top: 3em;
+  }
+}
+
 .product-card-desc > *:not(:first-child) {
   margin-block-start: 1.062rem;
 }
@@ -107,6 +123,13 @@
 
 .product-card-desc a {
   color: rgba(var(--clr-dark) / 0.9);
+}
+
+.quantity-container {
+  @include smallSize2 {
+    display: flex;
+    gap: 2em;
+  }
 }
 
 .quantity {
@@ -207,6 +230,11 @@
 
   text-align: center;
   flex-direction: column;
+
+  @include smallSize2 {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 .product-header ul li {
@@ -215,6 +243,10 @@
   font-size: 1.125rem;
   cursor: pointer;
   transition: all 0.25 ease;
+
+  @include smallSize2 {
+    margin-inline: 0;
+  }
 }
 
 .product-header ul > *:last-of-type span {
@@ -238,6 +270,10 @@
 .product-desc-inner {
   background-color: rgb(242, 241, 236);
   padding: 3.75em 1.875em 6.25em;
+
+  @include middleSize {
+    padding: 4.5em 7.5em 5.81em;
+  }
 }
 
 .tab-content {
@@ -278,12 +314,20 @@
 
 .reviews h3 {
   color: #333;
-  font-size: 20px;
+  font-size: 1.25rem;
   margin-block-end: 1em;
+
+  @include smallSize2 {
+    font-size: clamp(1.625rem, 3vw, 1.875rem);
+  }
 }
 
 .reviews ul > *:not(:first-child) {
   margin-top: 0.6em;
+
+  @include smallSize2 {
+    margin-top: 1.25em;
+  }
 }
 .reviews ul li {
   --flow-gap: 40px;
@@ -294,6 +338,10 @@
 
 .reviews ul > *:nth-child(even) {
   margin-inline-start: 1.56em;
+
+  @include middleSize {
+    margin-inline-start: 3em;
+  }
 }
 
 .review img {
@@ -303,6 +351,17 @@
 .publish-data {
   flex-direction: column;
   justify-content: space-between;
+
+  @include smallSize2 {
+    flex: 1;
+    flex-direction: row;
+  }
+}
+
+.publish-data h4 {
+  @include smallSize2 {
+    font-size: 1.25rem;
+  }
 }
 
 .reviews li p {
@@ -318,6 +377,10 @@
 .review-form h3 {
   font-size: 1.312rem;
   margin-block-end: 100px;
+
+  @include smallSize2 {
+    font-size: 1.5rem;
+  }
 }
 
 .review-form label {
@@ -337,9 +400,66 @@
 
 .review-form input {
   border-radius: 30px;
-  height: 60px;
+  height: 50px;
 }
 
 .review-form textarea {
   border-radius: 24px;
+}
+
+.input-group {
+  @include smallSize2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1em;
+  }
+}
+
+.input-group > *:last-child {
+  @include smallSize2 {
+    margin-top: 0;
+  }
+}
+
+/* rating */
+.rating {
+  align-items: center;
+}
+
+.rate {
+  float: left;
+  height: 2.875em;
+  padding: 0 0.625em;
+}
+.rate:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+}
+.rate:not(:checked) > label {
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 1.56rem;
+  color: #ccc;
+}
+.rate:not(:checked) > label:before {
+  content: '★ ';
+}
+.rate > input:checked ~ label {
+  // color: #ffc700;
+  color: rgb(var(--clr-accent));
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #deb217;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
 }

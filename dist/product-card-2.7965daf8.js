@@ -142,13 +142,13 @@
       this[globalName] = mainExports;
     }
   }
-})({"bMu7j":[function(require,module,exports) {
+})({"59GAs":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "956bec27ebeb6277";
+module.bundle.HMR_BUNDLE_ID = "c8e909dc7965daf8";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, chrome, browser, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -578,157 +578,8 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
     });
 }
 
-},{}],"5J9JY":[function(require,module,exports) {
-async function loader() {
-    const pages = await require("77d331fb642b0b48");
-    pages.render();
-}
-loader();
-const inputCount = document.querySelector("#input-count");
-const btnCount = document.querySelectorAll(".quantity-btn");
-function stepper() {
-    let id = this.getAttribute("id");
-    let min = parseInt(inputCount.getAttribute("min"));
-    let max = parseInt(inputCount.getAttribute("max"));
-    let step = parseInt(inputCount.getAttribute("step"));
-    let value = parseInt(inputCount.value);
-    let calStep = id === "increment" ? step : -step;
-    let newValue = value + calStep;
-    if (newValue >= min && newValue <= max) inputCount.value = newValue;
-}
-btnCount.forEach((btn)=>{
-    btn.addEventListener("click", stepper);
-});
-//product-header - tab-title
-const tabs = document.querySelectorAll(".tab-title");
-const tabsContent = document.querySelectorAll(".tab-content");
-function handleChangeTitle(index) {
-    tabs.forEach((tab)=>tab.classList.remove("active"));
-    tabsContent.forEach((tab)=>{
-        tab.classList.remove("active");
-    });
-    tabs.forEach((tab, i)=>{
-        if (i === index) tab.classList.add("active");
-    });
-    tabsContent[index].classList.add("active");
-}
-tabs.forEach((tab, i)=>{
-    tab.addEventListener("click", ()=>handleChangeTitle(i));
-});
-//rating
-document.addEventListener("DOMContentLoaded", function() {
-    const rateInputs = document.querySelectorAll(".rate input");
-    rateInputs.forEach(function(input) {
-        input.addEventListener("click", function() {
-            const scrollTop = window.scrollY || document.documentElement.scrollTop;
-            window.scrollTo(0, scrollTop);
-        });
-    });
-});
+},{}],"fWF5Q":[function(require,module,exports) {
 
-},{"77d331fb642b0b48":"6L75x"}],"6L75x":[function(require,module,exports) {
-module.exports = require("520f4a47028a1d69")(require("59682f61a7f36161").getBundleURL("cPmMK") + "main.18dbc454.js" + "?" + Date.now()).catch((err)=>{
-    delete module.bundle.cache[module.id];
-    throw err;
-}).then(()=>module.bundle.root("1SICI"));
+},{}]},["59GAs","fWF5Q"], "fWF5Q", "parcelRequire03cd")
 
-},{"520f4a47028a1d69":"61B45","59682f61a7f36161":"lgJ39"}],"61B45":[function(require,module,exports) {
-"use strict";
-var cacheLoader = require("ca2a84f7fa4a3bb0");
-module.exports = cacheLoader(function(bundle) {
-    return new Promise(function(resolve, reject) {
-        // Don't insert the same script twice (e.g. if it was already in the HTML)
-        var existingScripts = document.getElementsByTagName("script");
-        if ([].concat(existingScripts).some(function isCurrentBundle(script) {
-            return script.src === bundle;
-        })) {
-            resolve();
-            return;
-        }
-        var preloadLink = document.createElement("link");
-        preloadLink.href = bundle;
-        preloadLink.rel = "preload";
-        preloadLink.as = "script";
-        document.head.appendChild(preloadLink);
-        var script = document.createElement("script");
-        script.async = true;
-        script.type = "text/javascript";
-        script.src = bundle;
-        script.onerror = function(e) {
-            var error = new TypeError("Failed to fetch dynamically imported module: ".concat(bundle, ". Error: ").concat(e.message));
-            script.onerror = script.onload = null;
-            script.remove();
-            reject(error);
-        };
-        script.onload = function() {
-            script.onerror = script.onload = null;
-            resolve();
-        };
-        document.getElementsByTagName("head")[0].appendChild(script);
-    });
-});
-
-},{"ca2a84f7fa4a3bb0":"j49pS"}],"j49pS":[function(require,module,exports) {
-"use strict";
-var cachedBundles = {};
-var cachedPreloads = {};
-var cachedPrefetches = {};
-function getCache(type) {
-    switch(type){
-        case "preload":
-            return cachedPreloads;
-        case "prefetch":
-            return cachedPrefetches;
-        default:
-            return cachedBundles;
-    }
-}
-module.exports = function(loader, type) {
-    return function(bundle) {
-        var cache = getCache(type);
-        if (cache[bundle]) return cache[bundle];
-        return cache[bundle] = loader.apply(null, arguments).catch(function(e) {
-            delete cache[bundle];
-            throw e;
-        });
-    };
-};
-
-},{}],"lgJ39":[function(require,module,exports) {
-"use strict";
-var bundleURL = {};
-function getBundleURLCached(id) {
-    var value = bundleURL[id];
-    if (!value) {
-        value = getBundleURL();
-        bundleURL[id] = value;
-    }
-    return value;
-}
-function getBundleURL() {
-    try {
-        throw new Error();
-    } catch (err) {
-        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
-        if (matches) // The first two stack frames will be this function and getBundleURLCached.
-        // Use the 3rd one, which will be a runtime in the original bundle.
-        return getBaseURL(matches[2]);
-    }
-    return "/";
-}
-function getBaseURL(url) {
-    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
-}
-// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
-function getOrigin(url) {
-    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
-    if (!matches) throw new Error("Origin not found");
-    return matches[0];
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-exports.getOrigin = getOrigin;
-
-},{}]},["bMu7j","5J9JY"], "5J9JY", "parcelRequire03cd")
-
-//# sourceMappingURL=product-card-1.ebeb6277.js.map
+//# sourceMappingURL=product-card-2.7965daf8.js.map

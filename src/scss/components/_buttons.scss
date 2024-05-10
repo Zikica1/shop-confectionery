@@ -1,5 +1,6 @@
 @use '../abstracts/colors' as *;
 @use '../abstracts/fonts' as *;
+@use '../abstracts/mixin' as *;
 
 .btn {
   color: rgb(var(--clr-light));
@@ -40,6 +41,10 @@
   width: 100%;
   height: 60px;
   overflow: hidden;
+
+  @include smallSize2 {
+    width: unset;
+  }
 }
 
 .btn-add .text {
