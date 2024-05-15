@@ -2847,6 +2847,10 @@ div:has(.social-icons) {
   height: 50px;
 }
 
+.review-form input:focus-visible, .review-form textarea:focus-visible {
+  outline: 2px solid #d3d3d3;
+}
+
 .review-form textarea {
   border-radius: 24px;
 }
