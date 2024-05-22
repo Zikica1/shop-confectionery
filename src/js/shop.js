@@ -46,7 +46,6 @@ function handleCategory(index) {
   });
 
   catGrou.forEach((grup) => {
-    console.log(grup);
     grup.classList.remove('current-cate');
   });
 

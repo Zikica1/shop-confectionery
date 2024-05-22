@@ -142,13 +142,13 @@
       this[globalName] = mainExports;
     }
   }
-})({"aRpc2":[function(require,module,exports) {
+})({"5rYqR":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "d143a40465ff09b0";
+module.bundle.HMR_BUNDLE_ID = "4db5042ebe3cf5ab";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, chrome, browser, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -578,153 +578,8 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
     });
 }
 
-},{}],"7SlKN":[function(require,module,exports) {
-async function loader() {
-    const pages = await require("e9b27365de99832c");
-    pages.render();
-}
-loader();
-const catTabs = document.querySelectorAll(".categ-item");
-const catLi = document.querySelectorAll(".category ul li");
-const catGrou = document.querySelectorAll(".grup-product");
-// function handleCategory(index) {
-//   if (index >= 0 && index < catTabs.length) {
-//     catTabs.forEach((tab) => {
-//       tab.classList.remove('action');
-//       catLi.forEach((item) => {
-//         item.classList.remove('current');
-//       });
-//       catGrou.forEach((grup) => {
-//         grup.classList.remove('current-cate');
-//       });
-//       catTabs[index].classList.add('action');
-//       catLi[index].classList.add('current');
-//       catGrou[index].classList.add('current-cate');
-//     });
-//   }
-// }
-function handleCategory(index) {
-    console.log(index);
-    catTabs.forEach((tab, i)=>{
-        if (i === index) tab.classList.add("action");
-        else tab.classList.remove("action");
-    });
-    catLi.forEach((item)=>{
-        item.classList.remove("current");
-    });
-    catGrou.forEach((grup)=>{
-        grup.classList.remove("current-cate");
-    });
-    catLi[index].classList.add("current");
-    catGrou[index].classList.add("current-cate");
-}
-catTabs.forEach((tab, i)=>{
-    tab.addEventListener("click", ()=>handleCategory(i));
-});
+},{}],"inASx":[function(require,module,exports) {
 
-},{"e9b27365de99832c":"ggNkG"}],"ggNkG":[function(require,module,exports) {
-module.exports = require("d2a0922822dcaaa9")(require("d4961ee17aadb9a4").getBundleURL("hXUkq") + "main.18dbc454.js" + "?" + Date.now()).catch((err)=>{
-    delete module.bundle.cache[module.id];
-    throw err;
-}).then(()=>module.bundle.root("1SICI"));
+},{}]},["5rYqR","inASx"], "inASx", "parcelRequire03cd")
 
-},{"d2a0922822dcaaa9":"61B45","d4961ee17aadb9a4":"lgJ39"}],"61B45":[function(require,module,exports) {
-"use strict";
-var cacheLoader = require("ca2a84f7fa4a3bb0");
-module.exports = cacheLoader(function(bundle) {
-    return new Promise(function(resolve, reject) {
-        // Don't insert the same script twice (e.g. if it was already in the HTML)
-        var existingScripts = document.getElementsByTagName("script");
-        if ([].concat(existingScripts).some(function isCurrentBundle(script) {
-            return script.src === bundle;
-        })) {
-            resolve();
-            return;
-        }
-        var preloadLink = document.createElement("link");
-        preloadLink.href = bundle;
-        preloadLink.rel = "preload";
-        preloadLink.as = "script";
-        document.head.appendChild(preloadLink);
-        var script = document.createElement("script");
-        script.async = true;
-        script.type = "text/javascript";
-        script.src = bundle;
-        script.onerror = function(e) {
-            var error = new TypeError("Failed to fetch dynamically imported module: ".concat(bundle, ". Error: ").concat(e.message));
-            script.onerror = script.onload = null;
-            script.remove();
-            reject(error);
-        };
-        script.onload = function() {
-            script.onerror = script.onload = null;
-            resolve();
-        };
-        document.getElementsByTagName("head")[0].appendChild(script);
-    });
-});
-
-},{"ca2a84f7fa4a3bb0":"j49pS"}],"j49pS":[function(require,module,exports) {
-"use strict";
-var cachedBundles = {};
-var cachedPreloads = {};
-var cachedPrefetches = {};
-function getCache(type) {
-    switch(type){
-        case "preload":
-            return cachedPreloads;
-        case "prefetch":
-            return cachedPrefetches;
-        default:
-            return cachedBundles;
-    }
-}
-module.exports = function(loader, type) {
-    return function(bundle) {
-        var cache = getCache(type);
-        if (cache[bundle]) return cache[bundle];
-        return cache[bundle] = loader.apply(null, arguments).catch(function(e) {
-            delete cache[bundle];
-            throw e;
-        });
-    };
-};
-
-},{}],"lgJ39":[function(require,module,exports) {
-"use strict";
-var bundleURL = {};
-function getBundleURLCached(id) {
-    var value = bundleURL[id];
-    if (!value) {
-        value = getBundleURL();
-        bundleURL[id] = value;
-    }
-    return value;
-}
-function getBundleURL() {
-    try {
-        throw new Error();
-    } catch (err) {
-        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
-        if (matches) // The first two stack frames will be this function and getBundleURLCached.
-        // Use the 3rd one, which will be a runtime in the original bundle.
-        return getBaseURL(matches[2]);
-    }
-    return "/";
-}
-function getBaseURL(url) {
-    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
-}
-// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
-function getOrigin(url) {
-    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
-    if (!matches) throw new Error("Origin not found");
-    return matches[0];
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-exports.getOrigin = getOrigin;
-
-},{}]},["aRpc2","7SlKN"], "7SlKN", "parcelRequire03cd")
-
-//# sourceMappingURL=shop.65ff09b0.js.map
+//# sourceMappingURL=product-card-5.be3cf5ab.js.map
