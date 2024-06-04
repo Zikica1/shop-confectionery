@@ -153,19 +153,35 @@
                 marked*
               </p>
             </div>
-            <form class="flow grid">
+            <form action="POST" data-netlify="true" class="flow grid">
               <div class="form-wrap flow">
                 <div>
-                  <label for="">Your Name</label>
-                  <input type="text" placeholder="Your Name *" />
+                  <label for="name">Your Name</label>
+                  <input
+                    type="text"
+                    placeholder="Your Name *"
+                    name="name"
+                    id="name"
+                  />
                 </div>
                 <div>
-                  <label for="">Your Email</label>
-                  <input type="text" placeholder="Your Email *:" />
+                  <label for="email">Your Email</label>
+                  <input
+                    type="email"
+                    placeholder="Your Email *:"
+                    name="email"
+                    id="email"
+                  />
                 </div>
               </div>
 
-              <textarea cols="40" rows="10" placeholder="Question *"></textarea>
+              <textarea
+                cols="40"
+                rows="10"
+                placeholder="Question *"
+                name="message"
+                id="message"
+              ></textarea>
               <button class="btn btn--accent btn--for" type="submit">
                 Send A Message
               </button>

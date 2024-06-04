@@ -261,6 +261,14 @@ mm2.add('(min-width: 1024px)', () => {
 });
 
 //cup-cak-anim
+const btnCupCake = document.querySelectorAll('.btn-cup-cake');
+
+btnCupCake.forEach((btn) => {
+  btn.onclick = function () {
+    window.location.href = 'shop.html';
+  };
+});
+
 gsap.from('.cup-anim-1', {
   y: -100,
   opacity: 0,
