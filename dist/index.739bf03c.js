@@ -781,7 +781,7 @@ mm2.add("(min-width: 1024px)", ()=>{
     });
 });
 //cup-cak-anim
-const btnCupCake = document.querySelectorAll(".btn-cup-cake");
+const btnCupCake = document.querySelectorAll(".btn-redirection");
 btnCupCake.forEach((btn)=>{
     btn.onclick = function() {
         window.location.href = "shop.html";
